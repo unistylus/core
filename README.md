@@ -41,10 +41,10 @@ Install using npm:
 
 ```sh
 # skins & mixins
-npm install --save @lamnhan/unistylus
+npm install --save @unistylus/core
 
 # soul
-npm install --save @lamnhan/unistylus-bootstrap
+npm install --save @unistylus/bootstrap
 ```
 
 Incuding skin(s) and soul:
@@ -53,27 +53,27 @@ Incuding skin(s) and soul:
 // I. Choose a skin (or multiple skins)
 
 //     1. Must has a default one (surfixed 'default')
-@import '@lamnhan/unistylus/scss/skins/light-default';
+@import '@unistylus/core/scss/skins/light-default';
 
 //     2. And, other skins if you want
-@import '@lamnhan/unistylus/scss/skins/dark';
+@import '@unistylus/core/scss/skins/dark';
 
 // II. Choose a soul
 
 //     1. (NOT RECOMMENDED) Include all parts (and variations)
-@import '@lamnhan/unistylus-bootstrap/full';
+@import '@unistylus/bootstrap/full';
 
 //     2. (RECOMMENDED) Just the part you needed ('core.scss' is required)
-@import '@lamnhan/unistylus-bootstrap/reset';
-@import '@lamnhan/unistylus-bootstrap/core';
-@import '@lamnhan/unistylus-bootstrap/content/typography';
-@import '@lamnhan/unistylus-bootstrap/components/button';
+@import '@unistylus/bootstrap/reset';
+@import '@unistylus/bootstrap/core';
+@import '@unistylus/bootstrap/content/typography';
+@import '@unistylus/bootstrap/components/button';
 ```
 
 To use minxins:
 
 ```scss
-@import '@lamnhan/unistylus/scss/mixins';
+@import '@unistylus/core/scss/mixins';
 ```
 
 ### CDN
@@ -85,21 +85,21 @@ Includes in your HTML:
 <!-- I. Choose a skin (or multiple skins) -->
 
 <!--     1. Must has a default one (surfixed 'default') -->
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus@latest/css/skins/light-default.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/core@latest/css/skins/light-default.min.css">
 
 <!--     2. And, other skins if you want -->
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus@latest/css/skins/dark.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/core@latest/css/skins/dark.min.css">
 
 <!-- II. Choose a soul -->
 
 <!--     1. (NOT RECOMMENDED) Include all parts (and variations) -->
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/full.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/bootstrap-css@latest/full.min.css">
 
 <!--     2. (RECOMMENDED) Just the part you needed ('core.css/core.min.css' is required)  -->
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/reset.min.css">
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/core.min.css">
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/content/typography.min.css">
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/components/button.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/bootstrap-css@latest/reset.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/bootstrap-css@latest/core.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/bootstrap-css@latest/content/typography.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/bootstrap-css@latest/components/button.min.css">
 ```
 
 ## Tutorials
@@ -114,7 +114,7 @@ In the context of the Unistylus framework, these terms have their special meanin
 
 ### Add new skins
 
-Add this to the global style file (ex.: [styles.scss](https://github.com/lamnhan/unistylus/blob/main/src/styles.scss) for Angular apps):
+Add this to the global style file (ex.: [styles.scss](https://github.com/unistylus/core/blob/main/src/styles.scss) for Angular apps):
 
 ```scss
 [data-theme=name] {
@@ -132,10 +132,10 @@ document.body.setAttribute('data-theme', 'name');
 
 ### Use icons
 
-Register icons globally, see [theming/app.component.scss](https://github.com/lamnhan/unistylus/blob/main/src/theming/app.component.scss) for example:
+Register icons globally, see [theming/app.component.scss](https://github.com/unistylus/core/blob/main/src/theming/app.component.scss) for example:
 
 ```scss
-@import '@lamnhan/unistylus/scss/mixins';
+@import '@unistylus/core/scss/mixins';
 
 $shared_icons: ();
 
@@ -162,12 +162,12 @@ To use registered icons, in component `.html`:
 <i class="icon icon-menu"></i>
 ```
 
-There are also built-in icon packs, [@lamnhan/unistylus-icons](https://github.com/lamnhan/unistylus-icons).
+There are also built-in icon packs, [@unistylus/core-icons](https://github.com/unistylus/core-icons).
 
 To access buit-in icon url, use the variable `$[icon_pack]_icons`:
 
 ```scss
-@import '@lamnhan/unistylus/scss/mixins';
+@import '@unistylus/core/scss/mixins';
 
 $light_theme_icons: (
   menu: '#{$bootstrap_icons}/light/list.svg'
@@ -178,7 +178,7 @@ $light_theme_icons: (
 
 #### Level 1
 
-To customize a skin (see [styles.scss](https://github.com/lamnhan/unistylus/blob/main/src/styles.scss) for example). Place this under the skin imports:
+To customize a skin (see [styles.scss](https://github.com/unistylus/core/blob/main/src/styles.scss) for example). Place this under the skin imports:
 
 ```scss
 @import 'path/to/a/skin';
@@ -253,7 +253,7 @@ Gradients:
 To add your own properties:
 
 ```scss
-@import '@lamnhan/unistylus/scss/mixins';
+@import '@unistylus/core/scss/mixins';
 
 $shared_properties: ();
 
@@ -278,8 +278,8 @@ $dark_theme_properties: (
 
 ## Mixins
 
-See [the list of mixins](https://github.com/lamnhan/unistylus/blob/main/projects/unistylus/src/scss/mixins).
+See [the list of mixins](https://github.com/unistylus/core/blob/main/projects/unistylus/src/scss/mixins).
 
 ## License
 
-**@lamnhan/unistylus** is released under the [MIT](https://github.com/lamnhan/unistylus/blob/master/LICENSE) license.
+**@unistylus/core** is released under the [MIT](https://github.com/unistylus/core/blob/master/LICENSE) license.

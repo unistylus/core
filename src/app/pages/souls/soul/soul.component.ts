@@ -44,7 +44,7 @@ export class SoulComponent implements OnInit {
     articleName = !childName ? articleName : articleName.split('/').shift() + '/' + childName;
     return `
 \`\`\`scss
-@import '@lamnhan/unistylus-${this.soulService.soul}/${articleName}';
+@import '@unistylus/core-${this.soulService.soul}/${articleName}';
 \`\`\`
     `;
   }
@@ -53,7 +53,7 @@ export class SoulComponent implements OnInit {
     articleName = !childName ? articleName : articleName.split('/').shift() + '/' + childName;
     return `
 \`\`\`html
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus-${this.soulService.soul}-css@latest/${articleName}.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/core-${this.soulService.soul}-css@latest/${articleName}.min.css">
 \`\`\`
     `;
   }

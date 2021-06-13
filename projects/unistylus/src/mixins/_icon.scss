@@ -1,4 +1,5 @@
-$bootstrap_icons: 'https://unpkg.com/@lamnhan/unistylus-icons@latest/bootstrap';
+$bootstrap_icons: 'https://unpkg.com/@unistylus/bootstrap-icons@latest';
+$material_icons: 'https://unpkg.com/@unistylus/material-icons@latest';
 
 @mixin register_app_icons($groups) {
   // properties

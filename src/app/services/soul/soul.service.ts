@@ -29,7 +29,7 @@ export class SoulService {
         this.soul = name;
         this.soulArticles = items;
         // load css
-        const soulUrl = `https://unpkg.com/@lamnhan/unistylus-${name}-css@latest/full.min.css`;
+        const soulUrl = `https://unpkg.com/@unistylus/${name}-css@latest/full.min.css`;
         const soulManagerEl = document.getElementById('soul-manager');
         if (soulManagerEl) {
           (soulManagerEl as any).href = soulUrl;
@@ -39,7 +39,7 @@ export class SoulService {
   }
 
   private getApi(soulName: string) {
-    // const apiUrl = `https://unpkg.com/@lamnhan/unistylus-${soulName}@latest/api.json`;
+    // const apiUrl = `https://unpkg.com/@unistylus/${soulName}@latest/api.json`;
     // return this.fetchService.get(apiUrl)
     const mockData = ['core','reset','components/button',['button-primary','button-secondary']];
     return of(mockData).pipe(
