@@ -162,7 +162,9 @@ To use registered icons, in component `.html`:
 <i class="icon icon-menu"></i>
 ```
 
-There are also built-in icon packs, [@unistylus/core-icons](https://github.com/unistylus/core-icons).
+There are also built-in icon packs:
+- Bootstrap: [@unistylus/bootstrap-icons](https://github.com/unistylus/bootstrap-icons)
+- Material: [@unistylus/material-icons](https://github.com/unistylus/material-icons)
 
 To access buit-in icon url, use the variable `$[icon_pack]_icons`:
 

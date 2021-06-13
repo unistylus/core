@@ -21,8 +21,8 @@ export class SoulComponent implements OnInit {
       // reset child
       this.activeChild = '';
       // fetch html code for no children article
-      if (!article.children) {
-        this.loadHtmlCode(article.name as string, article.name as string);
+      if (article && !article?.children) {
+        this.loadHtmlCode(article.name as string, article.name?.split('/').pop() as string);
       }
     }),
   );
@@ -44,7 +44,7 @@ export class SoulComponent implements OnInit {
     articleName = !childName ? articleName : articleName.split('/').shift() + '/' + childName;
     return `
 \`\`\`scss
-@import '@unistylus/core-${this.soulService.soul}/${articleName}';
+@import '@unistylus/${this.soulService.soul}/${articleName}';
 \`\`\`
     `;
   }
@@ -53,7 +53,7 @@ export class SoulComponent implements OnInit {
     articleName = !childName ? articleName : articleName.split('/').shift() + '/' + childName;
     return `
 \`\`\`html
-<link rel="stylesheet" href="https://unpkg.com/@unistylus/core-${this.soulService.soul}-css@latest/${articleName}.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@unistylus/${this.soulService.soul}-css@latest/${articleName}.min.css">
 \`\`\`
     `;
   }

@@ -1,22 +1,41 @@
 .host {
   
-  .head {}
+  .head {
+    padding: .5rem 1rem;
+    background: var(--app-color-foreground);
+    color: var(--app-color-background);
+    border-radius: var(--app-size-radius);
+    text-transform: uppercase;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+  }
   
-  .search {}
+  .search {
+    margin-top: 2rem;
+  }
   
   ul.children {
     margin: 0;
     padding: 0;
     list-style: none;
-    padding: 1rem;
-    background: var(--app-color-background-shade);
+    margin-top: 2rem;
 
     li {
       background: var(--app-color-background);
-      padding: 1rem;
       margin-bottom: 2rem;
       border: 1px solid var(--app-color-foreground);
       border-radius: 3px;
+
+      .summary, .detail {
+        padding: 1rem;
+      }
+
+      .summary {
+        cursor: pointer;
+      }
     }
   }
 

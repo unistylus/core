@@ -4,7 +4,7 @@
     <h2>{{ soulArticle.name }}</h2>
   </div>
 
-  <div class="search margin-top-2x margin-bottom" *ngIf="soulArticle.children">
+  <div class="search" *ngIf="soulArticle.children">
     <input class="form-control" type="text" placeholder="Filter children ...">
   </div>
 
@@ -33,10 +33,7 @@
     <!-- children -->
     <li *ngFor="let child of (soulArticle.children || [])">
 
-      <div class="summary">
-        <div>{{ child }}</div>
-        <div><button class="button" (click)="selectChild(soulArticle?.name || '', child)">+</button></div>
-      </div>
+      <div class="summary" (click)="selectChild(soulArticle?.name || '', child)">{{ child }}</div>
 
       <div class="detail" *ngIf="activeChild === child">
 
@@ -64,5 +61,5 @@
 </div>
 
 <ng-template #blank>
-  <h1>Select a article!</h1>
+  <h1>...</h1>
 </ng-template>

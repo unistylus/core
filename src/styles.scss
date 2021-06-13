@@ -91,11 +91,19 @@
 
   .source {
     padding: 1.5rem;
-    border: 1px solid rgba(var(--app-color-medium-rgb), .3);
-    border-radius: var(--app-size-radius) var(--app-size-radius) 0 0;
+    border: 1px solid rgba(var(--app-color-medium-rgb), .5);
+    border-radius: 5px 5px 0 0;
 
     br, hr {
       display: none;
+    }
+  }
+
+  .display {
+    margin-top: -.5rem;
+
+    nguix-content markdown pre {
+      border-radius: 0 0 5px 5px !important;
     }
   }
 

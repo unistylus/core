@@ -39,10 +39,10 @@ export class SoulService {
   }
 
   private getApi(soulName: string) {
-    // const apiUrl = `https://unpkg.com/@unistylus/${soulName}@latest/api.json`;
-    // return this.fetchService.get(apiUrl)
-    const mockData = ['core','reset','components/button',['button-primary','button-secondary']];
-    return of(mockData).pipe(
+    const apiUrl = `https://unpkg.com/@unistylus/${soulName}@latest/api.json`;
+    // const mockData = ['core','reset','components/button',['button-primary','button-secondary']];
+    // return of(mockData).pipe(
+    return this.fetchService.get(apiUrl).pipe(
       map(result => this.processApi(result as Array<string | string[]>)),
     );
   }
