@@ -1,0 +1,93 @@
+<div class="page-icons padding">
+
+  <div class="head margin-top">
+    <h2>Icons</h2>
+    <p class="font-lg text-medium-shade">Add icons to your app, only use what you need, separated icons for different themes.</p>
+  </div>
+  
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/components/icons.min.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '@lamnhan/unistylus-bootstrap/components/icons';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="section-1 margin-top-2x">
+
+    <div class="content">
+      <h3>Register icons</h3>
+      <p>App icons can be use anywhere in the app. Icons are registered when needed:</p>
+      <ul>
+        <li>Step 1: Define icons sources (.svg, .png, ...), see <a href="https://github.com/lamnhan/unistylus/blob/main/src/scss/app/app.data.scss" target="_blank">example</a>.</li>
+        <li>Step 2: Register icons, see <a href="https://github.com/lamnhan/unistylus/blob/main/src/scss/app/light.app.component.scss" target="_blank">example</a>.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="section-2 margin-top-2x">
+
+    <div class="content">
+      <h3>Use icons</h3>
+      <p>Try changing to the "Dark theme", the icons will also be changed to adapt.</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code1>
+        <i class="icon icon-ok"></i><br>
+        <i class="icon icon-right"></i><br>
+        <i class="icon icon-github"></i>
+      </div>
+  
+      <div class="display">
+        <app-code [htmlSource]="code1"></app-code>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section-3 margin-top-2x">
+
+    <div class="content">
+      <h3>Sizes</h3>
+      <p>Default icon size is 2x2rem. Add <code>[1-7]x</code> to change icon size. Or set the width and height of the icon tag.</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code2>
+        <i class="icon-1x icon-github"></i><br>
+        <i class="icon icon-github"></i><br>
+        <i class="icon-3x icon-github"></i><br>
+        <i class="icon-5x icon-github"></i><br>
+        <i class="icon-7x icon-github"></i>
+      </div>
+  
+      <div class="display">
+        <app-code [htmlSource]="code2"></app-code>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section-4 margin-top-2x">
+
+    <div class="content">
+      <h3>Built-in icons</h3>
+      <div>
+        <p>Icon CDN url structure:</p>
+        <app-code htmlCode="https://unpkg.com/@lamnhan/unistylus-icons@latest/[pack]/[skin]/[name].svg"></app-code>
+      </div>
+      <p>Usage example, see <code><a href="https://github.com/lamnhan/unistylus/blob/main/src/theming/app.component.scss" target="_blank">app.component.scss</a></code></p>
+    </div>
+
+  </section>
+
+</div>

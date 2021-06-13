@@ -1,0 +1,58 @@
+$bootstrap_icons: 'https://unpkg.com/@lamnhan/unistylus-icons@latest/bootstrap';
+
+@mixin register_app_icons($groups) {
+  // properties
+  @each $theme, $icons in $groups {
+    @if $theme != 'default' {
+      // custom
+      [data-theme="#{$theme}"] {
+        @each $name, $url in $icons {
+          --app-icon-#{$name}: url(#{$url});
+        }
+      }
+    } @else {
+      // default
+      :root, [data-theme="default"] {
+        @each $name, $url in $icons {
+          --app-icon-#{$name}: url(#{$url});
+        }
+      }
+    }
+  }
+
+  // rules
+  $icons: map-get($groups, 'default');
+  @each $name, $url in $icons {
+    .icon-#{$name} {
+      background-image: var(--app-icon-#{$name});
+    }
+  }
+}
+
+@mixin register_component_icon_properties($groups, $component_name) {
+  @each $theme, $icons in $groups {
+    @if $theme != 'default' {
+      // custom
+      [data-theme="#{$theme}"] {
+        @each $name, $url in $icons {
+          --component-#{$component_name}-icon-#{$name}: url(#{$url});
+        }
+      }
+    } @else {
+      // default
+      :root, [data-theme="default"] {
+        @each $name, $url in $icons {
+          --component-#{$component_name}-icon-#{$name}: url(#{$url});
+        }
+      }
+    }
+  }
+}
+
+@mixin register_component_icon_rules($icons, $component_name) {
+  @each $name, $url in $icons {
+    .icon-#{$name} {
+      background-image: var(--component-#{$component_name}-icon-#{$name});
+    }
+  }
+}

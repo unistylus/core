@@ -1,0 +1,64 @@
+<div class="page-images padding">
+
+  <div class="head margin-top">
+    <h2>Images</h2>
+    <p class="font-lg text-medium-shade">Display images and figures.</p>
+  </div>
+
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/content/images.min.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '@lamnhan/unistylus-bootstrap/content/images';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="section-1 margin-top-2x">
+  
+    <div class="content">
+      <h3>Images</h3>
+      <p>Image in a fluid container.</p>
+    </div>
+    
+    <div class="code">
+
+      <div class="source" #code1>
+        <div style="width: 100%;"><br>
+          <hr><img class="image" src="https://via.placeholder.com/300x200"><br>
+        </div>
+      </div>
+  
+      <div class="display">
+        <app-code [htmlSource]="code1"></app-code>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section-2 margin-top-2x">
+  
+    <div class="content">
+      <h3>Figures</h3>
+      <p>Image in a fixed 500px container.</p>
+    </div>
+    
+    <div class="code">
+
+      <div class="source" #code2>
+        <figure class="figure" style="width: 500px;"><br>
+          <hr><img class="image" src="https://via.placeholder.com/1000x800"><br>
+          <hr><figcaption class="figure-caption">A caption for the above image.</figcaption><br>
+        </figure>
+      </div>
+  
+      <div class="display">
+        <app-code [htmlSource]="code2"></app-code>
+      </div>
+    </div>
+
+  </section>
+
+</div>

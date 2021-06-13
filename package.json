@@ -1,0 +1,77 @@
+{
+  "name": "@lamnhan/unistylus",
+  "version": "0.0.0",
+  "description": "An SCSS/CSS theming system.",
+  "author": "Lam Nhan",
+  "homepage": "https://unistylus.lamnhan.com",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "scss": "unistylus clean dist/unistylus && unistylus copy mixins skins --src projects/unistylus/src --out dist/unistylus/scss",
+    "css": "sass dist/unistylus/scss:dist/unistylus/css",
+    "css-min": "cleancss -O2 --source-map --batch --batch-suffix .min -o dist/unistylus/css dist/unistylus/css/**/*.css",
+    "build:lib": "npm run scss && npm run css && npm run css-min && cpy projects/unistylus/package.json README.md LICENSE dist/unistylus",
+    "deploy:lib": "cd dist/unistylus && npm publish && cd ../../",
+    "build:app": "ng build",
+    "deploy:app": "git add . && git commit -m 'deploy:app' && git push",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "coverage": "cat ./coverage/*/lcov.info | coveralls",
+    "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "theming",
+    "angular"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamnhan/unistylus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lamnhan/unistylus/issues"
+  },
+  "dependencies": {
+    "@angular/animations": "~12.0.3",
+    "@angular/common": "~12.0.3",
+    "@angular/compiler": "~12.0.3",
+    "@angular/core": "~12.0.3",
+    "@angular/forms": "~12.0.3",
+    "@angular/platform-browser": "~12.0.3",
+    "@angular/platform-browser-dynamic": "~12.0.3",
+    "@angular/router": "~12.0.3",
+    "@lamnhan/nguix-starter": "0.0.7",
+    "@lamnhan/ngx-schemata": "0.0.3",
+    "@lamnhan/ngx-useful": "0.0.11",
+    "@lamnhan/schemata": "0.0.8",
+    "@lamnhan/unistylus": "0.0.11",
+    "change-case": "^4.1.2",
+    "highlight.js": "^10.6.0",
+    "ngx-quicklink": "^0.2.7",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.1.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.0.3",
+    "@angular/cli": "~12.0.3",
+    "@angular/compiler-cli": "~12.0.3",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
+    "clean-css-cli": "^5.3.0",
+    "coveralls": "^3.1.0",
+    "cpy-cli": "^3.1.1",
+    "jasmine-core": "~3.7.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^12.0.3",
+    "sass": "^1.34.1",
+    "typescript": "~4.2.3"
+  }
+}

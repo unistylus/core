@@ -1,0 +1,160 @@
+.host {
+  padding: 3rem 1rem;
+
+  .heading {
+
+    .text {
+      width: 100%;
+  
+      h1 {
+        font-size: 4rem;
+        font-weight: 700;
+      }
+  
+      p {
+        font-size: 2rem;
+        color: var(--app-color-medium);
+      }
+    }
+  
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+  
+      a.source-code {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+  
+        .icon {
+          opacity: .5;
+        }
+  
+        span {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .action {
+
+    .skin, .soul {
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 100%;
+          padding: 1rem;
+          margin-top: 1rem;
+          cursor: pointer;
+          border: 1px solid var(--app-color-foreground);
+          border-radius: 10rem;
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          
+          &:hover {
+            background: var(--app-color-background-shade);
+          }
+
+          &:last-child {
+            opacity: .3;
+
+            &:hover {
+              background: none;
+            }
+          }
+          
+          &.active {
+            background: var(--app-color-medium);
+          }
+
+          img {
+            width: 48px;
+            height: 48px;
+          }
+
+          span {
+            margin-left: 1rem;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+@media only screen and (min-width: 480px) {
+
+  .host {
+
+    .heading {
+
+      .text h1 {
+        font-size: 5rem;
+      }
+  
+      .cta {
+        flex-wrap: nowrap;
+  
+        a.source-code {
+          margin-top: 0;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+
+  .host .heading .text h1 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .host {
+
+    .heading .text h1 {
+      font-size: 7rem;
+    }
+
+    .action {
+
+      .skin, .soul {
+  
+        ul {
+          margin-left: -1rem;
+          flex-wrap: wrap;
+
+          li {
+            width: calc(50% - 1rem);
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  .host .heading {
+    padding-top: 1rem;
+
+    .text h1 {
+      font-size: 8rem;
+    }
+  }
+}

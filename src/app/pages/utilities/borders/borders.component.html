@@ -1,0 +1,69 @@
+<div class="page-borders padding">
+
+  <div class="head margin-top">
+    <h2>Borders</h2>
+    <p class="font-lg text-medium-shade">Set borders.</p>
+  </div>
+  
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/utilities/borders.min.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '@lamnhan/unistylus-bootstrap/utilities/borders';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="section-1 margin-top-2x">
+
+    <div class="content">
+      <h3>Borders</h3>
+      <p>Set border to an element.</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code1>
+        <div class="border margin">Default</div><br>
+        <div class="border-primary margin">Primary</div><br>
+        <div class="border-secondary margin">Secondary</div><br>
+        <div class="border-tertiary margin">Tertiary</div><br>
+        <div class="border-success margin">Success</div><br>
+        <div class="border-warning margin">Warning</div><br>
+        <div class="border-danger margin">Danger</div><br>
+        <div class="border-dark margin">Dark</div><br>
+        <div class="border-medium margin">Medium</div><br>
+        <div class="border-light margin">Light</div>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code1"></app-code>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-2 margin-top-2x">
+
+    <div class="content">
+      <h3>Custom sides</h3>
+      <p>Set border top/right/bottom/left.</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code2>
+        <div class="border-top margin">Top</div><br>
+        <div class="border-right-primary margin">Right</div><br>
+        <div class="border-bottom-secondary margin">Bottom</div><br>
+        <div class="border-left-tertiary margin">Left</div>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code2"></app-code>
+      </div>
+    </div>
+  </section>
+
+</div>

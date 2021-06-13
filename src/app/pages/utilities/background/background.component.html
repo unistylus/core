@@ -1,0 +1,74 @@
+<div class="page-background padding">
+
+  <div class="head margin-top">
+    <h2>Background</h2>
+    <p class="font-lg text-medium-shade">Background colors.</p>
+  </div>
+  
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/utilities/background.min.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '@lamnhan/unistylus-bootstrap/utilities/background';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="section-1 margin-top-2x">
+
+    <div class="content">
+      <h3>Colors</h3>
+      <p>Background colors.</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code1>
+        <div class="background">Default</div><br>
+        <div class="background-primary">Primary</div><br>
+        <div class="background-secondary">Secondary</div><br>
+        <div class="background-tertiary">Tertiary</div><br>
+        <div class="background-success">Success</div><br>
+        <div class="background-warning">Warning</div><br>
+        <div class="background-danger">Danger</div><br>
+        <div class="background-dark">Dark</div><br>
+        <div class="background-medium">Medium</div><br>
+        <div class="background-light">Light</div>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code1"></app-code>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section-2 margin-top-2x">
+
+    <div class="content">
+      <h3>Gradients</h3>
+      <p>Background gradients.</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code2>
+        <div class="background-gradient-primary">Primary</div><br>
+        <div class="background-gradient-secondary">Secondary</div><br>
+        <div class="background-gradient-tertiary">Tertiary</div><br>
+        <div class="background-gradient-success">Success</div><br>
+        <div class="background-gradient-warning">Warning</div><br>
+        <div class="background-gradient-danger">Danger</div><br>
+        <div class="background-gradient-dark">Dark</div><br>
+        <div class="background-gradient-medium">Medium</div><br>
+        <div class="background-gradient-light">Light</div>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code2"></app-code>
+      </div>
+    </div>
+  </section>
+
+</div>

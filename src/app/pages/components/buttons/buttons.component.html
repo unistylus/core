@@ -1,0 +1,222 @@
+<div class="page-buttons padding">
+
+  <div class="head margin-top">
+    <h2>Buttons</h2>
+    <p class="font-lg text-medium-shade">Display buttons.</p>
+  </div>
+  
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/components/buttons.min.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '@lamnhan/unistylus-bootstrap/components/buttons';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="section-1 margin-top-2x">
+    
+    <div class="content">
+      <h3>Colors</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code1>
+        <button type="button" class="button">Default</button><br>
+        <button type="button" class="button-primary">Primary</button><br>
+        <button type="button" class="button-secondary">Secondary</button><br>
+        <button type="button" class="button-tertiary">Tertiaty</button><br>
+        <button type="button" class="button-success">Success</button><br>
+        <button type="button" class="button-danger">Danger</button><br>
+        <button type="button" class="button-warning">Warning</button><br>
+        <button type="button" class="button-dark">Dark</button><br>
+        <button type="button" class="button-medium">Medium</button><br>
+        <button type="button" class="button-light">Light</button><br>
+        <button type="button" class="button-link">Link</button>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code1"></app-code>
+      </div>
+
+    </div>
+  
+  </section>
+
+  <section class="section-2 margin-top-2x">
+    
+    <div class="content">
+      <h3>Gradients</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code2>
+        <button type="button" class="button-primary background-gradient-primary">Primary (gradient)</button><br>
+        <button type="button" class="button-secondary background-gradient-secondary">Secondary</button><br>
+        <button type="button" class="button-tertiary background-gradient-tertiary">Tertiaty</button><br>
+        <button type="button" class="button-success background-gradient-success">Success</button><br>
+        <button type="button" class="button-danger background-gradient-danger">Danger</button><br>
+        <button type="button" class="button-warning background-gradient-warning">Warning</button><br>
+        <button type="button" class="button-dark background-gradient-dark">Dark</button><br>
+        <button type="button" class="button-medium background-gradient-medium">Medium</button><br>
+        <button type="button" class="button-light background-gradient-light">Light</button>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code2"></app-code>
+      </div>
+
+    </div>
+  
+  </section>
+
+  <section class="section-3 margin-top-2x">
+    
+    <div class="content">
+      <h3>Outlines</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code3>
+        <button type="button" class="button-outline">Default</button><br>
+        <button type="button" class="button-outline-primary">Primary</button><br>
+        <button type="button" class="button-outline-secondary">Secondary</button><br>
+        <button type="button" class="button-outline-tertiary">Tertiary</button><br>
+        <button type="button" class="button-outline-success">Success</button><br>
+        <button type="button" class="button-outline-danger">Danger</button><br>
+        <button type="button" class="button-outline-warning">Warning</button><br>
+        <button type="button" class="button-outline-dark">Dark</button><br>
+        <button type="button" class="button-outline-medium">Medium</button><br>
+        <button type="button" class="button-outline-light">Light</button>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code3"></app-code>
+      </div>
+
+    </div>
+  
+  </section>
+
+  <section class="section-4 margin-top-2x">
+    
+    <div class="content">
+      <h3>Outlines (ease)</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code4>
+        <button type="button" class="button-outline ease-all">Default (ease)</button><br>
+        <button type="button" class="button-outline-primary ease-all-short">Primary (short)</button><br>
+        <button type="button" class="button-outline-secondary ease-all-long">Secondary (long)</button><br>
+        <button type="button" class="button-outline-tertiary ease-all">Tertiary</button><br>
+        <button type="button" class="button-outline-success ease-all">Success</button><br>
+        <button type="button" class="button-outline-danger ease-all">Danger</button><br>
+        <button type="button" class="button-outline-warning ease-all">Warning</button><br>
+        <button type="button" class="button-outline-dark ease-all">Dark</button><br>
+        <button type="button" class="button-outline-medium ease-all">Medium</button><br>
+        <button type="button" class="button-outline-light ease-all">Light</button>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code4"></app-code>
+      </div>
+
+    </div>
+  
+  </section>
+
+  <section class="section-5 margin-top-2x">
+    
+    <div class="content">
+      <h3>Sizes</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code5>
+        <button type="button" class="button-xs">Tiny</button><br>
+        <button type="button" class="button-primary-sm">Small</button><br>
+        <button type="button" class="button-secondary">Normal</button><br>
+        <button type="button" class="button-tertiary-lg">Large</button><br>
+        <button type="button" class="button-success-xl">Extra large</button><br>
+        <button type="button" class="button-outline-xs">Tiny</button><br>
+        <button type="button" class="button-outline-primary-sm">Small</button><br>
+        <button type="button" class="button-outline-secondary">Normal</button><br>
+        <button type="button" class="button-outline-tertiary-lg">Large</button><br>
+        <button type="button" class="button-outline-success-xl">Extra large</button>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code5"></app-code>
+      </div>
+
+    </div>
+  
+  </section>
+
+  <section class="section-6 margin-top-2x">
+    
+    <div class="content">
+      <h3>Pills</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code6>
+        <button type="button" class="button-xs border-pill">Tiny</button><br>
+        <button type="button" class="button-primary-sm border-pill">Small</button><br>
+        <button type="button" class="button-success border-pill">Normal</button><br>
+        <button type="button" class="button-warning-lg border-pill">Large</button><br>
+        <button type="button" class="button-danger-xl border-pill">Extra large</button><br>
+        <button type="button" class="button-outline-xs border-pill">Tiny</button><br>
+        <button type="button" class="button-outline-primary-sm border-pill">Small</button><br>
+        <button type="button" class="button-outline-success border-pill">Normal</button><br>
+        <button type="button" class="button-outline-warning-lg border-pill">Large</button><br>
+        <button type="button" class="button-outline-danger-xl border-pill">Extra large</button>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code6"></app-code>
+      </div>
+
+    </div>
+  
+  </section>
+
+  <section class="section-7 margin-top-2x">
+    
+    <div class="content">
+      <h3>Sharps</h3>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code7>
+        <button type="button" class="button-xs border-sharp">Tiny</button><br>
+        <button type="button" class="button-primary-sm border-sharp">Small</button><br>
+        <button type="button" class="button-success border-sharp">Normal</button><br>
+        <button type="button" class="button-warning-lg border-sharp">Large</button><br>
+        <button type="button" class="button-danger-xl border-sharp">Extra large</button><br>
+        <button type="button" class="button-outline-xs border-sharp">Tiny</button><br>
+        <button type="button" class="button-outline-primary-sm border-sharp">Small</button><br>
+        <button type="button" class="button-outline-success border-sharp">Normal</button><br>
+        <button type="button" class="button-outline-warning-lg border-sharp">Large</button><br>
+        <button type="button" class="button-outline-danger-xl border-sharp">Extra large</button>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code7"></app-code>
+      </div>
+
+    </div>
+  
+  </section>
+
+</div>

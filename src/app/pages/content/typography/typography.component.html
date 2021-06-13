@@ -1,0 +1,122 @@
+<div class="page-typography padding">
+
+  <div class="head margin-top">
+    <h2>Typography</h2>
+    <p class="font-lg text-medium-shade">This is how content is displayed in general.</p>
+  </div>
+
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/content/typography.min.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '@lamnhan/unistylus-bootstrap/content/typography';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="section-1 margin-top-2x">
+    
+    <div class="content">
+      <h3>Paragraphs</h3>
+      <p>Displaying paragraphs, links, ...</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta beatae quia, dolorem obcaecati fugit repudiandae
+          placeat alias ea soluta deserunt atque animi, impedit numquam quos distinctio cumque voluptatibus libero.
+          Corrupti?</p>
+        <p>This is a list:</p>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Lorem ipsum dolor</li>
+        </ul>
+        <p><a href="#">This is a link!</a></p>
+      </div>
+
+    </div>
+  
+  </section>
+
+  <section class="section-2 margin-top-2x">
+
+    <div class="content">
+      <h2>Headings</h2>
+      <p>Displaying headings.</p>
+    </div>
+
+    <div class="code">
+  
+      <div class="source" #code2>
+        <h1>h1. Typography</h1><br>
+        <h2>h2. Typography</h2><br>
+        <h3>h3. Typography</h3><br>
+        <h4>h4. Typography</h4><br>
+        <h5>h5. Typography</h5><br>
+        <h6>h6. Typography</h6>
+      </div>
+  
+      <div class="display">
+        <app-code [htmlSource]="code2"></app-code>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="section-3 margin-top-2x">
+
+    <div class="content">
+      <h2>Families</h2>
+      <p>Change font family, try changing to the "Custom fonts" theme to see the customization.</p>
+    </div>
+
+    <div class="code">
+  
+      <div class="source" #code3>
+        <h1 class="font-body">Lorem ipsum dolor</h1><br>
+        <h1 class="font-head">Lorem ipsum dolor</h1><br>
+        <h1 class="font-quote">Lorem ipsum dolor</h1><br>
+        <h1 class="font-code">Lorem ipsum dolor</h1>
+      </div>
+  
+      <div class="display">
+        <app-code [htmlSource]="code3"></app-code>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="section-4 margin-top-2x">
+
+    <div class="content">
+      <h2>Sizes</h2>
+      <p>Change font size.</p>
+    </div>
+
+    <div class="code">
+  
+      <div class="source" #code4>
+        <span class="font-xs">Tiny</span><br>
+        <span class="font-sm">Small</span><br>
+        <span>Normal</span><br>
+        <span class="font-lg">Large</span><br>
+        <span class="font-xl">Extra</span><br>
+        <span class="font-2x">2x</span><br>
+        <span class="font-3x">3x</span><br>
+        <span class="font-5x">5x</span><br>
+        <span class="font-7x">7x</span>
+      </div>
+  
+      <div class="display">
+        <app-code [htmlSource]="code4"></app-code>
+      </div>
+  
+    </div>
+  </section>
+
+</div>
+

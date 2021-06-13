@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+  <script>
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+
+  <meta charset="utf-8">
+  <title>Unistylus</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Temporary meta tags (use prerender later) -->
+  <meta name="description" content="A modern, clean and light weight CSS theming system.">
+  <meta property="og:title" content="Unistylus">
+  <meta property="og:description" content="A modern, clean and light weight CSS theming system.">
+  <meta property="og:image" content="https://unistylus.lamnhan.com/assets/images/featured.jpg">
+  <meta property="og:url" content="https://unistylus.lamnhan.com/">
+  <link rel="canonical" href="https://unistylus.lamnhan.com/">
+  <link rel="author" href="https://www.facebook.com/lamhiennhan">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lam_hien_nhan">
+  <meta name="twitter:creator" content="@lam_hien_nhan">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Unistylus">
+  <meta property="og:locale" content="en-US">
+  <meta property="fb:app_id" content="1234567890">
+  <meta itemprop="name" content="Unistylus">
+  <meta itemprop="description" content="A modern, clean and light weight CSS theming system.">
+  <meta itemprop="image" content="https://unistylus.lamnhan.com/assets/images/featured.jpg">
+
+  <!-- For theming examples -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Code highlight -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/javascript.min.js"></script>
+
+  <!-- In-app splash screen -->
+  <link rel="stylesheet" href="/assets/css/splash-screen.css">
+
+  <!-- Unistylus soul (for demonstration purpose) -->
+  <link id="soul-manager" rel="stylesheet" href="https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/full.min.css">
+</head>
+<body>
+
+  <app-root></app-root>
+
+  <div id="app-splash-screen">
+    <img src="/assets/images/logo.svg">
+  </div>
+
+</body>
+</html>

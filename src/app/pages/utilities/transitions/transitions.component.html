@@ -1,0 +1,40 @@
+<div class="page-transitions padding">
+
+  <div class="head margin-top">
+    <h2>Transitions</h2>
+    <p class="font-lg text-medium-shade">Add transitions to elements.</p>
+  </div>
+  
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/utilities/transitions.min.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '@lamnhan/unistylus-bootstrap/utilities/transitions';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="section-1 margin-top-2x">
+
+    <div class="content">
+      <h3>Ease all</h3>
+      <p>Set ease all transition.</p>
+    </div>
+
+    <div class="code">
+
+      <div class="source" #code1>
+        <button class="ease-all button-outline-primary-xl">Hover me!</button><br>
+        <button class="ease-all-short button-outline-success-xl">Short</button><br>
+        <button class="ease-all-long button-outline-danger-xl">Long</button>
+      </div>
+
+      <div class="display">
+        <app-code [htmlSource]="code1"></app-code>
+      </div>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,143 @@
+<div class="page-form-control padding">
+
+  <div class="head margin-top">
+    <h2>Form control</h2>
+    <p class="font-lg text-medium-shade">Display textual form control.</p>
+  </div>
+  
+  <div class="imports margin-top">
+    <app-code
+      title="Minimum imports:"
+      showLang="css"
+      htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/forms/form.min.css&#x22;&#x3E;"
+      htmlLabel="CSS"
+      cssCode="@import '@lamnhan/unistylus-bootstrap/forms/form';"
+      cssLabel="SCSS"
+    ></app-code>
+  </div>
+
+  <section class="margin-top">
+    <h2 class="border-bottom padding-bottom margin-top-3x margin-bottom">Forms</h2>
+  
+    <form class="margin-top">
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div>
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Content here ..."></textarea>
+      </div>
+    </form>
+  
+    <form class="margin-top">
+      <h3>Colors</h3>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1a" class="form-label">Primary</label>
+        <input type="text" class="form-control-primary" id="exampleFormControlInput1a" placeholder=".form-control-primary">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1b" class="form-label">Secondary</label>
+        <input type="text" class="form-control-secondary" id="exampleFormControlInput1b" placeholder=".form-control-secondary">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1c" class="form-label">Tertiary</label>
+        <input type="text" class="form-control-tertiary" id="exampleFormControlInput1c" placeholder=".form-control-tertiary">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1d" class="form-label">Success</label>
+        <input type="text" class="form-control-success" id="exampleFormControlInput1d" placeholder=".form-control-success">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1e" class="form-label">Warning</label>
+        <input type="text" class="form-control-warning" id="exampleFormControlInput1e" placeholder=".form-control-warning">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1f" class="form-label">Danger</label>
+        <input type="text" class="form-control-danger" id="exampleFormControlInput1f" placeholder=".form-control-danger">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1g" class="form-label">Dark</label>
+        <input type="text" class="form-control-dark" id="exampleFormControlInput1g" placeholder=".form-control-dark">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1h" class="form-label">Medium</label>
+        <input type="text" class="form-control-medium" id="exampleFormControlInput1h" placeholder=".form-control-medium">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput1i" class="form-label">Light</label>
+        <input type="text" class="form-control-light" id="exampleFormControlInput1i" placeholder=".form-control-light">
+      </div>
+    </form>
+  
+    <form class="margin-top">
+      <h3>Sizes</h3>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput6" class="form-label">Tiny input</label>
+        <input type="text" class="form-control-xs" id="exampleFormControlInput6" placeholder=".form-control-xs">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput2" class="form-label">Small input</label>
+        <input type="text" class="form-control-primary-sm" id="exampleFormControlInput2" placeholder=".form-control-sm">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput3" class="form-label">Default input</label>
+        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder=".form-control">
+      </div>
+      <div class="margin-bottom">
+        <label for="exampleFormControlInput4" class="form-label">Large input</label>
+        <input type="text" class="form-control-secondary-lg" id="exampleFormControlInput4" placeholder=".form-control-lg">
+      </div>
+      <div>
+        <label for="exampleFormControlInput5" class="form-label">Extra large input</label>
+        <input type="text" class="form-control-tertiary-xl" id="exampleFormControlInput5" placeholder=".form-control-xl">
+      </div>
+    </form>
+  
+    <form class="margin-top">
+      <h3>Disabled/Readonly</h3>
+      <input class="form-control" type="text" placeholder="Disabled input" disabled>
+      <input class="form-control-primary margin-top" type="text" placeholder="Disabled readonly input" disabled readonly>
+      <input class="form-control margin-top" type="text" placeholder="Readonly input here..." readonly>
+      <input class="form-control-secondary margin-top" type="text" placeholder="Readonly input here..." readonly>
+    </form>
+  
+    <form class="margin-top">
+      <h3>Files</h3>
+      <div class="margin-bottom">
+        <label for="formFile" class="form-label">Default file input example</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <div class="margin-bottom">
+        <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+        <input class="form-control" type="file" id="formFileMultiple" multiple>
+      </div>
+      <div class="margin-bottom">
+        <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+        <input class="form-control" type="file" id="formFileDisabled" disabled>
+      </div>
+      <div class="margin-bottom">
+        <label for="formFileSm" class="form-label">Small file input example</label>
+        <input class="form-control form-control-sm" id="formFileSm" type="file">
+      </div>
+      <div>
+        <label for="formFileLg" class="form-label">Large file input example</label>
+        <input class="form-control form-control-lg" id="formFileLg" type="file">
+      </div>
+    </form>
+  
+    <form class="margin-top">
+      <h3>Data list</h3>
+      <label for="exampleDataList" class="form-label">Datalist example</label>
+      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+      <datalist id="datalistOptions">
+        <option value="San Francisco">
+        <option value="New York">
+        <option value="Seattle">
+        <option value="Los Angeles">
+        <option value="Chicago">
+      </datalist>
+    </form>
+  </section>
+
+</div>

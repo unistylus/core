@@ -1,0 +1,68 @@
+<div class="host padding" *ngIf="soulArticle$ | async as soulArticle; else blank">
+
+  <div class="head margin-top">
+    <h2>{{ soulArticle.name }}</h2>
+  </div>
+
+  <div class="search margin-top-2x margin-bottom" *ngIf="soulArticle.children">
+    <input class="form-control" type="text" placeholder="Filter children ...">
+  </div>
+
+  <ul class="children">
+
+    <!-- no children -->
+    <li *ngIf="!soulArticle.children">
+      
+      <div class="import">
+        <div class="margin-bottom">Import SCSS</div>
+        <nguix-content [content]="getCSSImport(soulArticle.name || '')"></nguix-content>
+        <div class="margin-top-2x margin-bottom">Or, include CSS</div>
+        <nguix-content [content]="getSCSSImport(soulArticle.name || '')"></nguix-content>
+      </div>
+  
+      <div class="code margin-top-2x" *ngIf="htmlCode">
+        <div class="margin-bottom">Preview & code:</div>
+        <div class="source" [innerHtml]="htmlCode | safe"></div>
+        <div class="display">
+          <nguix-content [content]="displayHtmlCode(htmlCode)"></nguix-content>
+        </div>
+      </div>
+
+    </li>
+
+    <!-- children -->
+    <li *ngFor="let child of (soulArticle.children || [])">
+
+      <div class="summary">
+        <div>{{ child }}</div>
+        <div><button class="button" (click)="selectChild(soulArticle?.name || '', child)">+</button></div>
+      </div>
+
+      <div class="detail" *ngIf="activeChild === child">
+
+        <div class="import">
+          <div class="margin-bottom">Import SCSS</div>
+          <nguix-content [content]="getCSSImport(soulArticle.name || '', child)"></nguix-content>
+          <div class="margin-top-2x margin-bottom">Or, include CSS</div>
+          <nguix-content [content]="getSCSSImport(soulArticle.name || '', child)"></nguix-content>
+        </div>
+
+        <div class="code margin-top-2x" *ngIf="htmlCode">
+          <div class="margin-bottom">Preview & code:</div>
+          <div class="source" [innerHtml]="htmlCode | safe"></div>
+          <div class="display">
+            <nguix-content [content]="displayHtmlCode(htmlCode)"></nguix-content>
+          </div>
+        </div>
+
+      </div>
+
+    </li>
+  </ul>
+
+
+</div>
+
+<ng-template #blank>
+  <h1>Select a article!</h1>
+</ng-template>

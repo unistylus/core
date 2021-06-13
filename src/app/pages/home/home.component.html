@@ -1,0 +1,130 @@
+<div class="host">
+
+  <section class="heading">
+
+    <div class="text">
+      <h1>
+        <span class="text-primary">U</span>
+        <span class="text-secondary">n</span>
+        <span class="text-tertiary">i</span>
+        <span class="text-success">s</span>
+        <span class="text-warning">t</span>
+        <span class="text-danger">y</span>
+        <span class="text-primary">l</span>
+        <span class="text-medium">u</span>
+        <span class="text-foreground">s</span>
+      </h1>
+      <p>A <strong class="text-foreground">modern</strong>, <strong class="text-foreground">clean</strong> and <strong class="text-foreground">light weight</strong> CSS/SCSS theming system.</p>
+    </div>
+  
+    <div class="cta">
+      <a
+        class="button-primary-xl"
+        [routerLink]="['/getting-started', 'usage']"
+      >Use it now!</a>
+      <a
+        class="source-code button-outline-medium-xl"
+        href="https://github.com/lamnhan/unistylus"
+        target="_blank"
+      >
+        <i class="icon icon-github"></i>
+        <span>Source code</span>
+      </a>
+    </div>
+
+  </section>
+
+  <section class="intro margin-top-5x">
+    <div class="title"><h2>Introduction</h2></div>
+    <div class="body">
+      <p class="text-medium" style="font-size: 1.2rem;">This is just another UI framework that nobody want to use, <a href="https://lamnhan.com" target="_blank">but me</a>, or isn't it?</p>
+      <p>It is an effort of balancing between convenience and customization.</p>
+      <p>If you want to build app that small, clean and have total control; or simply don't want to use other frameworks. You may give Unistylus a try:</p>
+      <ul>
+        <li>💚 Just standard HTML, CSS/SCSS & JS (when needed).</li>
+        <li>🌓 Supports multiple skins in app runtime.</li>
+        <li>👌 No icon fonts; only register whatever icons you ever need.</li>
+        <li>⚡ Imports just the parts you want.</li>
+        <li>🔨 Customize to the bone, at microscopic level.</li>
+        <li>🔌 Drop in replacement (-ish) for other frameworks.</li>
+        <li>😍 A member of the <a href="https://lamnhan.com/works" target="blank">Lam Nhan Ecosystem</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="action margin-top-5x">
+    <div class="title"><h2>See the action</h2></div>
+
+    <div class="body">
+
+      <div class="skin margin-top-2x">
+        <h3>Apply skin</h3>
+        <p>An app can have many skins, skin can be changed easily.</p>
+        <ul>
+          <li (click)="changeSkin('light')" [class.active]="settingService.theme === 'light'">
+            <img src="https://img.icons8.com/fluent/50/000000/sun.png"/>
+            <span>Light skin</span>
+          </li>
+          <li (click)="changeSkin('dark')" [class.active]="settingService.theme === 'dark'">
+            <img src="https://img.icons8.com/fluent/48/000000/new-moon.png"/>
+            <span>Dark skin</span>
+          </li>
+          <li (click)="changeSkin('example1')" [class.active]="settingService.theme === 'example1'">
+            <img src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"/>
+            <span>Custom colors (example)</span>
+          </li>
+          <li (click)="changeSkin('example2')" [class.active]="settingService.theme === 'example2'">
+            <img src="https://img.icons8.com/fluent/48/000000/text.png"/>
+            <span>Custom fonts (example)</span>
+          </li>
+          <li>
+            <img src="https://img.icons8.com/fluent/48/000000/connection-status-off.png"/>
+            <span>More skins coming!</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="soul margin-top-2x">
+        <h3>Apply soul</h3>
+        <p>An app should only have one soul, for example this app has the <code>bootstrap</code> soul. This changer is for demonstration purpose.</p>
+        <ul>
+          <li (click)="changeSoul('bootstrap')" [class.active]="soulService.soul === 'bootstrap'">
+            <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
+            <span>Bootstrap</span>
+          </li>
+          <li>
+            <img src="https://img.icons8.com/fluent/48/000000/connection-status-off.png"/>
+            <span>More soul coming!</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="installation margin-top-5x">
+
+    <div class="title"><h2>Installation</h2></div>
+
+    <div class="body">
+      <p class="margin-top">Install skins & mixins:</p>
+      <app-code htmlCode="npm install --save @lamnhan/unistylus"></app-code>
+      <p class="margin-top">Install soul:</p>
+      <app-code htmlCode="npm install --save @lamnhan/unistylus-bootstrap"></app-code>
+
+      <p class="margin-top">Import skins from a CDN:</p>
+      <app-code htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus@latest/css/skins/light-default.min.css&#x22;&#x3E;"></app-code>
+      <p class="margin-top">Import soul from a CDN:</p>
+      <app-code htmlCode="&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://unpkg.com/@lamnhan/unistylus-bootstrap-css@latest/full.min.css&#x22;&#x3E;"></app-code>
+
+      <div class="margin-top">
+        <a
+          class="button-outline-primary"
+          [routerLink]="['/getting-started', 'usage']"
+        >Next, see usage!</a>
+      </div>
+    </div>
+
+  </section>
+
+</div>

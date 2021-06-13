@@ -1,0 +1,39 @@
+@mixin register_app_properties($groups) {
+  @each $theme, $props in $groups {
+    @if $theme != 'default' {
+      // custom
+      [data-theme="#{$theme}"] {
+        @each $key, $value in $props {
+          --app-#{$key}: #{$value};
+        }
+      }
+    } @else {
+      // default
+      :root, [data-theme="default"] {
+        @each $key, $value in $props {
+          --app-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+@mixin register_component_properties($groups, $component_name) {
+  @each $theme, $props in $groups {
+    @if $theme != 'default' {
+      // custom
+      [data-theme="#{$theme}"] {
+        @each $key, $value in $props {
+          --component-#{$component_name}-#{$key}: #{$value};
+        }
+      }
+    } @else {
+      // default
+      :root, [data-theme="default"] {
+        @each $key, $value in $props {
+          --component-#{$component_name}-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<div class="menu">
+  <div class="head">
+    <div class="title">
+      <span class="truncate" (click)="mobileMenuExpanded=!mobileMenuExpanded">Documentation</span>
+    </div>
+    <select
+      id="themer"
+      (change)="selectTheme($event)"
+    >
+      <optgroup label="Built-ins">
+        <option value="light" [selected]="settingService.theme === 'light'">Light</option>
+        <option value="dark" [selected]="settingService.theme === 'dark'">Dark</option>
+      </optgroup>
+      <optgroup label="Examples">
+        <option value="example1" [selected]="settingService.theme === 'example1'">Custom colors</option>
+        <option value="example2" [selected]="settingService.theme === 'example2'">Custom fonts</option>
+      </optgroup>
+    </select>
+    <div class="toggler">
+      <button
+        [class.expanded]="mobileMenuExpanded"
+        (click)="mobileMenuExpanded=!mobileMenuExpanded"
+      >
+        <i class="icon icon-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="body" [class.expanded]="mobileMenuExpanded">
+  
+    <ul class="menu-items">
+
+      <li *ngFor="let menuItem of menuItems">
+        <a
+          *ngIf="menuItem.level!==0;else noLinkElse"
+          [href]="menuItem.href"
+          [usefulRouterLink]="menuItem.routerLink"
+          usefulRouterLinkActive="active"
+          (click)="mobileMenuExpanded=false"
+          [innerHtml]="menuItem.text"
+        ></a>
+        <ng-template #noLinkElse>
+          <strong class="margin-top-2x">{{menuItem.text}}</strong>
+        </ng-template>
+      </li>
+
+      <li>
+        <select class="margin-top-2x" (change)="selectSoul($event)">
+          <optgroup label="Select a soul:">
+            <option value="bootstrap" [selected]="soulService.soul === 'bootstrap'">Bootstrap</option>
+            <option value="material" [selected]="soulService.soul === 'material'">Material</option>
+          </optgroup>
+        </select>
+      </li>
+      <li *ngFor="let soulArticle of soulService.soulArticles">
+        <a
+          [href]="soulArticle.href"
+          [usefulRouterLink]="soulArticle.routerLink"
+          usefulRouterLinkActive="active"
+          (click)="mobileMenuExpanded=false"
+          [innerHtml]="soulArticle.text"
+        ></a>
+      </li>
+
+    </ul>
+
+  </div>
+</div>

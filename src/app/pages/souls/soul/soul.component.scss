@@ -1,0 +1,23 @@
+.host {
+  
+  .head {}
+  
+  .search {}
+  
+  ul.children {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding: 1rem;
+    background: var(--app-color-background-shade);
+
+    li {
+      background: var(--app-color-background);
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--app-color-foreground);
+      border-radius: 3px;
+    }
+  }
+
+}
