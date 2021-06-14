@@ -12,7 +12,7 @@ import {
 } from '@lamnhan/ngx-useful';
 
 import { AppRoutingModule } from './app-routing.module';
-
+import { AppTranslationModule } from './app-translation.module';
 import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './components/header/header.component';
@@ -31,6 +31,7 @@ import { SoulService } from './services/soul/soul.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppTranslationModule,
     RouterLinkDirectiveModule,
   ],
   providers: [

@@ -57,7 +57,7 @@ export class SoulService {
             name,
             text,
             level: 1,
-            routerLink: ['soul', articleId],
+            routerLink: ['part', articleId],
           } as SoulArticle;
           // next item
           const nextItem = result[i+1];

@@ -1,5 +1,7 @@
 ## Basic usage
 
+Use the framework with CSS or SCSS.
+
 ### SCSS
 
 Install using npm:
@@ -12,7 +14,7 @@ npm install --save @unistylus/core
 npm install --save @unistylus/bootstrap
 ```
 
-Incuding skin(s) and soul:
+Imports skin(s) and soul:
 
 ```scss
 // I. Choose a skin (or multiple skins)

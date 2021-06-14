@@ -18,7 +18,7 @@ export class PartComponent implements OnInit {
   htmlCode?: string;
 
   public readonly soulArticle$ = this.route.params.pipe(
-    map(params => this.soulService.getSoulArticle(params.articleId)),
+    map(params => this.soulService.getSoulArticle(params.id)),
     tap(article => {
       // reset child
       this.activeChild = '';

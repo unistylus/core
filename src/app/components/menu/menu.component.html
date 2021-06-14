@@ -2,8 +2,8 @@
 
   <div class="head">
 
-    <div class="title">
-      <span class="truncate" (click)="mobileMenuExpanded=!mobileMenuExpanded">Documentation</span>
+    <div class="title truncate">
+      <span (click)="mobileMenuExpanded=!mobileMenuExpanded">Documentation</span>
     </div>
 
     <select id="theme-selector" (change)="selectTheme($event)">
@@ -22,11 +22,8 @@
 
 
     <div class="toggler">
-      <button
-        [class.expanded]="mobileMenuExpanded"
-        (click)="mobileMenuExpanded=!mobileMenuExpanded"
-      >
-        <i class="icon icon-right"></i>
+      <button (click)="mobileMenuExpanded=!mobileMenuExpanded">
+        <i class="icon icon-menu"></i>
       </button>
     </div>
 
