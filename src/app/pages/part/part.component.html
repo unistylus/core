@@ -19,11 +19,11 @@
           <nguix-content [content]="getSCSSImport(soulArticle.name)"></nguix-content>
         </div>
     
-        <div class="code margin-top-2x" *ngIf="htmlCode">
+        <div class="code margin-top-2x" *ngIf="defaultHtmlCode">
           <div class="margin-bottom">Preview & code:</div>
-          <div class="source" [innerHtml]="htmlCode | safe"></div>
+          <div class="source" [innerHtml]="defaultHtmlCode | safe"></div>
           <div class="display">
-            <nguix-content [content]="displayHtmlCode(htmlCode)"></nguix-content>
+            <nguix-content [content]="displayHtmlCode(defaultHtmlCode)"></nguix-content>
           </div>
         </div>
 
@@ -32,7 +32,7 @@
     </li>
 
     <!-- variations -->
-    <li class="title">Variation usage</li>
+    <li class="title" *ngIf="soulArticle.children">Variation usage</li>
     
     <li class="search" *ngIf="soulArticle.children">
       <input
@@ -62,11 +62,11 @@
           <nguix-content [content]="getSCSSImport(soulArticle.name, child)"></nguix-content>
         </div>
 
-        <div class="code margin-top-2x" *ngIf="htmlCode">
+        <div class="code margin-top-2x" *ngIf="childHtmlCode">
           <div class="margin-bottom">Preview & code:</div>
-          <div class="source" [innerHtml]="htmlCode | safe"></div>
+          <div class="source" [innerHtml]="childHtmlCode | safe"></div>
           <div class="display">
-            <nguix-content [content]="displayHtmlCode(htmlCode)"></nguix-content>
+            <nguix-content [content]="displayHtmlCode(childHtmlCode)"></nguix-content>
           </div>
         </div>
 
@@ -79,5 +79,5 @@
 </div>
 
 <ng-template #blank>
-  <h1>...</h1>
+  <h2 class="margin-top-2x">Select a part!</h2>
 </ng-template>

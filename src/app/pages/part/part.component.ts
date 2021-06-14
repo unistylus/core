@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, tap, take } from 'rxjs/operators';
+import { map, tap, take, catchError } from 'rxjs/operators';
 import { FetchService } from '@lamnhan/ngx-useful';
 
 import { SoulService } from '../../services/soul/soul.service';
@@ -15,7 +15,8 @@ export class PartComponent implements OnInit {
   activeChild = '';
   search = '';
 
-  htmlCode?: string;
+  defaultHtmlCode?: string;
+  childHtmlCode?: string;
 
   public readonly soulArticle$ = this.route.params.pipe(
     map(params => this.soulService.getSoulArticle(params.id)),
@@ -24,7 +25,8 @@ export class PartComponent implements OnInit {
       this.activeChild = '';
       // fetch html code for default
       if (article) {
-        this.loadHtmlCode(article.name as string, article.name?.split('/').pop() as string);
+        this.loadHtmlCode(article.name as string, article.name?.split('/').pop() as string)
+          .subscribe(htmlCode => this.defaultHtmlCode = htmlCode);
       }
     }),
   );
@@ -39,7 +41,8 @@ export class PartComponent implements OnInit {
 
   selectChild(articleName: string, childName: string) {
     this.activeChild = childName;
-    this.loadHtmlCode(articleName, childName);
+    this.loadHtmlCode(articleName, childName)
+      .subscribe(htmlCode => this.childHtmlCode = htmlCode);
   }
 
   getCSSImport(articleName: string, childName?: string) {
@@ -61,13 +64,10 @@ export class PartComponent implements OnInit {
   }
 
   loadHtmlCode(articleName: string, className: string) {
-    this.htmlCode = '<!-- Preview -->';
-    this.fetchService.get(`/content/previews/${articleName}.html`, undefined, false).pipe(
+    return  this.fetchService.get(`/content/previews/${articleName}.html`, undefined, false).pipe(
       take(1),
       map(rawHtml => (rawHtml as string).replace(/\[class\]/g, className)),
-    ).subscribe(
-      htmlCode => this.htmlCode = htmlCode,
-      () => this.htmlCode = 'Preview not found!',
+      catchError(() => 'Preview not found!'),
     );
   }
 

@@ -19,7 +19,7 @@ export class SoulService {
   constructor(private fetchService: FetchService) {}
 
   getSoulArticle(articleId: string) {
-    const name = articleId.replace(/-/g, '/');
+    const name = articleId.replace('-', '/');
     return this.soulArticles.filter(item => item.name === name).pop() as SoulArticle;
   }
   
