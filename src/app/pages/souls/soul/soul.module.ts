@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { SafePipeModule } from '@lamnhan/ngx-useful';
 import { NguixContentComponentModule } from '@lamnhan/nguix-starter';
 
+import { FilterPipeModule } from '../../../pipes/filter/filter.module';
+
 import { SoulRoutingModule } from './soul-routing.module';
 import { SoulComponent } from './soul.component';
 
@@ -17,6 +19,7 @@ import { SoulComponent } from './soul.component';
     FormsModule,
     SafePipeModule,
     NguixContentComponentModule,
+    FilterPipeModule,
     SoulRoutingModule
   ]
 })

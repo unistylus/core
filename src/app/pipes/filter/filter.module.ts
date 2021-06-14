@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FilterPipe } from './filter.pipe';
 
 @NgModule({
-  imports: [FilterPipe],
+  declarations: [FilterPipe],
   exports: [FilterPipe]
 })
 export class FilterPipeModule { }

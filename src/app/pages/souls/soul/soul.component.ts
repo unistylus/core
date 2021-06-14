@@ -22,8 +22,8 @@ export class SoulComponent implements OnInit {
     tap(article => {
       // reset child
       this.activeChild = '';
-      // fetch html code for no children article
-      if (article && !article?.children) {
+      // fetch html code for default
+      if (article) {
         this.loadHtmlCode(article.name as string, article.name?.split('/').pop() as string);
       }
     }),
@@ -61,11 +61,14 @@ export class SoulComponent implements OnInit {
   }
 
   loadHtmlCode(articleName: string, className: string) {
-    this.htmlCode = '...';
+    this.htmlCode = '<!-- Preview -->';
     this.fetchService.get(`/content/previews/${articleName}.html`, undefined, false).pipe(
       take(1),
       map(rawHtml => (rawHtml as string).replace(/\[class\]/g, className)),
-    ).subscribe(htmlCode => this.htmlCode = htmlCode);
+    ).subscribe(
+      htmlCode => this.htmlCode = htmlCode,
+      () => this.htmlCode = 'Preview not found!',
+    );
   }
 
   displayHtmlCode(htmlCode: string) {

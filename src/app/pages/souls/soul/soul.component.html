@@ -4,40 +4,54 @@
     <h2>{{ soulArticle.name }}</h2>
   </div>
 
-  <div class="search" *ngIf="soulArticle.children">
-    <input
-      class="form-control"
-      type="text"
-      [(ngModel)]="search"
-      placeholder="Filter variations ...">
-  </div>
-
   <ul class="children">
 
-    <!-- no children -->
-    <li class="active" *ngIf="!soulArticle.children">
-      
-      <div class="import">
-        <div class="margin-bottom">Import SCSS</div>
-        <nguix-content [content]="getCSSImport(soulArticle.name)"></nguix-content>
-        <div class="margin-top-2x margin-bottom">Or, include CSS</div>
-        <nguix-content [content]="getSCSSImport(soulArticle.name)"></nguix-content>
-      </div>
-  
-      <div class="code margin-top-2x" *ngIf="htmlCode">
-        <div class="margin-bottom">Preview & code:</div>
-        <div class="source" [innerHtml]="htmlCode | safe"></div>
-        <div class="display">
-          <nguix-content [content]="displayHtmlCode(htmlCode)"></nguix-content>
+    <!-- default -->
+    <li class="title">Default usage</li>
+    <li class="active">
+
+      <div class="detail">
+
+        <div class="import">
+          <div class="margin-bottom">Import SCSS</div>
+          <nguix-content [content]="getCSSImport(soulArticle.name)"></nguix-content>
+          <div class="margin-top-2x margin-bottom">Or, include CSS</div>
+          <nguix-content [content]="getSCSSImport(soulArticle.name)"></nguix-content>
         </div>
-      </div>
+    
+        <div class="code margin-top-2x" *ngIf="htmlCode">
+          <div class="margin-bottom">Preview & code:</div>
+          <div class="source" [innerHtml]="htmlCode | safe"></div>
+          <div class="display">
+            <nguix-content [content]="displayHtmlCode(htmlCode)"></nguix-content>
+          </div>
+        </div>
+
+      </div>      
 
     </li>
 
-    <!-- children -->
-    <li *ngFor="let child of (soulArticle.children || []) | filter: search" [class.active]="child === activeChild">
+    <!-- variations -->
+    <li class="title">Variation usage</li>
+    
+    <li class="search" *ngIf="soulArticle.children">
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="search"
+        placeholder="Filter variations ...">
+    </li>
 
-      <div class="summary" (click)="selectChild(soulArticle?.name, child)">{{ child }}</div>
+    <li
+      *ngFor="let child of (soulArticle.children || []) | filter: search"
+      [class.active]="child === activeChild">
+
+      <div
+        class="summary"
+        (click)="child !== activeChild ? selectChild(soulArticle.name, child) : false"
+      >
+        {{ child }}
+      </div>
 
       <div class="detail" *ngIf="activeChild === child">
 

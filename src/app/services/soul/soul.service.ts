@@ -71,6 +71,6 @@ export class SoulService {
         }
       })
       .filter(item => !!item)
-      .sort((a, b) => (a as SoulArticle).text > (b as SoulArticle).text ? -1 : 1) as SoulArticle[];
+      .sort((a, b) => (a as SoulArticle).text > (b as SoulArticle).text ? 1 : -1) as SoulArticle[];
   }
 }
