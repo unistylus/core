@@ -13,6 +13,8 @@ import { SoulService } from '../../../services/soul/soul.service';
 export class SoulComponent implements OnInit {
 
   activeChild = '';
+  search = '';
+
   htmlCode?: string;
 
   public readonly soulArticle$ = this.route.params.pipe(

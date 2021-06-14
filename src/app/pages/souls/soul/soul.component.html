@@ -5,19 +5,23 @@
   </div>
 
   <div class="search" *ngIf="soulArticle.children">
-    <input class="form-control" type="text" placeholder="Filter children ...">
+    <input
+      class="form-control"
+      type="text"
+      [(ngModel)]="search"
+      placeholder="Filter variations ...">
   </div>
 
   <ul class="children">
 
     <!-- no children -->
-    <li *ngIf="!soulArticle.children">
+    <li class="active" *ngIf="!soulArticle.children">
       
       <div class="import">
         <div class="margin-bottom">Import SCSS</div>
-        <nguix-content [content]="getCSSImport(soulArticle.name || '')"></nguix-content>
+        <nguix-content [content]="getCSSImport(soulArticle.name)"></nguix-content>
         <div class="margin-top-2x margin-bottom">Or, include CSS</div>
-        <nguix-content [content]="getSCSSImport(soulArticle.name || '')"></nguix-content>
+        <nguix-content [content]="getSCSSImport(soulArticle.name)"></nguix-content>
       </div>
   
       <div class="code margin-top-2x" *ngIf="htmlCode">
@@ -31,17 +35,17 @@
     </li>
 
     <!-- children -->
-    <li *ngFor="let child of (soulArticle.children || [])">
+    <li *ngFor="let child of (soulArticle.children || []) | filter: search" [class.active]="child === activeChild">
 
-      <div class="summary" (click)="selectChild(soulArticle?.name || '', child)">{{ child }}</div>
+      <div class="summary" (click)="selectChild(soulArticle?.name, child)">{{ child }}</div>
 
       <div class="detail" *ngIf="activeChild === child">
 
         <div class="import">
           <div class="margin-bottom">Import SCSS</div>
-          <nguix-content [content]="getCSSImport(soulArticle.name || '', child)"></nguix-content>
+          <nguix-content [content]="getCSSImport(soulArticle.name, child)"></nguix-content>
           <div class="margin-top-2x margin-bottom">Or, include CSS</div>
-          <nguix-content [content]="getSCSSImport(soulArticle.name || '', child)"></nguix-content>
+          <nguix-content [content]="getSCSSImport(soulArticle.name, child)"></nguix-content>
         </div>
 
         <div class="code margin-top-2x" *ngIf="htmlCode">

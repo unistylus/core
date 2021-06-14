@@ -29,6 +29,10 @@
       border: 1px solid var(--app-color-foreground);
       border-radius: 3px;
 
+      &:hover, &.active {
+        box-shadow: 0 0 3rem var(--app-color-foreground);
+      }
+
       .summary, .detail {
         padding: 1rem;
       }

@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { pascalCase } from 'change-case';
 import { NavItem, FetchService } from '@lamnhan/ngx-useful';
-import { of } from 'rxjs';
 
 export interface SoulArticle extends NavItem {
+  name: string;
+  text: string;
   children: string[];
 }
 
@@ -40,8 +41,6 @@ export class SoulService {
 
   private getApi(soulName: string) {
     const apiUrl = `https://unpkg.com/@unistylus/${soulName}@latest/api.json`;
-    // const mockData = ['core','reset','components/button',['button-primary','button-secondary']];
-    // return of(mockData).pipe(
     return this.fetchService.get(apiUrl).pipe(
       map(result => this.processApi(result as Array<string | string[]>)),
     );
@@ -63,7 +62,7 @@ export class SoulService {
           // next item
           const nextItem = result[i+1];
           if (nextItem && typeof nextItem !== 'string') {
-            soulArticle.children = nextItem;
+            soulArticle.children = nextItem.sort();
           }
           // result
           return soulArticle;
@@ -71,6 +70,7 @@ export class SoulService {
           return null;
         }
       })
-      .filter(item => !!item) as SoulArticle[];
+      .filter(item => !!item)
+      .sort((a, b) => (a as SoulArticle).text > (b as SoulArticle).text ? -1 : 1) as SoulArticle[];
   }
 }
