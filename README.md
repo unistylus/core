@@ -78,7 +78,6 @@ To use minxins:
 
 ### CDN
 
-
 Includes in your HTML:
 
 ```html

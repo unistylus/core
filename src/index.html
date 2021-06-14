@@ -38,25 +38,16 @@
   <meta itemprop="description" content="A modern, clean and light weight CSS theming system.">
   <meta itemprop="image" content="https://unistylus.lamnhan.com/assets/images/featured.jpg">
 
-  <!-- Code highlight -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/css.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/javascript.min.js"></script>
-
-  <!-- In-app splash screen -->
-  <link rel="stylesheet" href="/assets/css/splash-screen.css">
+  <!-- In-app splashscreen -->
+  <link rel="stylesheet" href="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/heartbeat/index.css">
+  <script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/heartbeat/index.js"></script>
 
   <!-- Unistylus soul (for demonstration purpose) -->
   <link id="soul-manager" rel="stylesheet" href="https://unpkg.com/@unistylus/bootstrap-css@latest/full.min.css">
+
 </head>
 <body>
-
   <app-root></app-root>
-
-  <div id="app-splash-screen">
-    <img src="/assets/images/logo.svg">
-  </div>
-
+  <div id="app-splash-screen"><div class="main"><div class="body"><img src="/assets/images/logo.svg"></div><div class="foot">Still working, please wait! 👌</div></div><noscript>Please enable JavaScript!</noscript></div>
 </body>
 </html>
