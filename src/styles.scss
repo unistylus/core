@@ -68,6 +68,8 @@ nguix-content markdown {
   }
 
   h2 {
+    margin-top: 0;
+    padding-top: 0;
 
     &, strong, a, code, a:hover {
       font-family: var(--app-font-head);

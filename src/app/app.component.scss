@@ -13,7 +13,6 @@
   }
 }
 
-
 @media only screen and (min-width: 992px) {
 
   .host {
@@ -30,6 +29,7 @@
       margin-left: 2rem;
       max-width: calc(100% - 250px - 2rem - 1px);
       border-left: 1px solid var(--app-color-background-shade);
+      padding: 2rem;
     }
   }
 }
