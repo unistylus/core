@@ -1,14 +1,14 @@
-.app {
-  margin-top: 65px;
+.host {
+  padding-top: 65px;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
 
   .sidebar {
     width: 100%;
   }
   
   .page-container {
-    width: 100%;
-    max-width: 992px;
-    margin: auto;
     min-height: calc(100vh - 65px - 49px - 97px); // header - aside - footer
   }
 }
@@ -16,7 +16,7 @@
 
 @media only screen and (min-width: 992px) {
 
-  .app {
+  .host {
     display: flex;
     flex-wrap: nowrap;
 
@@ -26,6 +26,7 @@
     
     .page-container {
       flex: 1;
+      max-width: calc(100% - 250px - 2rem);
       margin: 0 0 0 2rem;
     }
   }
