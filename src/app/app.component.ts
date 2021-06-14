@@ -19,203 +19,34 @@ export class AppComponent {
 
   menuItems: NavItem[] = [
     {
-      text: 'Getting started',
+      text: 'Guides',
       level: 0,
     },
       {
         text: 'Introduction',
         level: 1,
-        routerLink: ['getting-started', 'introduction']
-      },
-      {
-        text: 'Install',
-        level: 1,
-        routerLink: ['getting-started', 'install']
+        routerLink: ['guide', 'introduction']
       },
       {
         text: 'Basic usage',
         level: 1,
-        routerLink: ['getting-started', 'usage']
+        routerLink: ['guide', 'usage']
       },
       {
-        text: 'Contribute',
+        text: 'What is skin?',
         level: 1,
-        routerLink: ['getting-started', 'contribute']
-      },
-    {
-      text: 'Skins',
-      level: 0,
-    },
-      {
-        text: 'Built-in skins',
-        level: 1,
-        routerLink: ['skin', 'builtin-skins']
+        routerLink: ['guide', 'skin']
       },
       {
-        text: 'Customize a skin',
+        text: 'What is soul?',
         level: 1,
-        routerLink: ['skin', 'customize-skin']
+        routerLink: ['guide', 'soul']
       },
       {
-        text: 'Add new skin',
+        text: 'Contribution',
         level: 1,
-        routerLink: ['skin', 'add-skin']
+        routerLink: ['guide', 'contribution']
       },
-    {
-      text: 'Souls',
-      level: 0,
-    },
-      {
-        text: 'Built-in souls',
-        level: 1,
-        routerLink: ['soul', 'builtin-souls']
-      },
-      {
-        text: 'Customize a soul',
-        level: 1,
-        routerLink: ['soul', 'customize-soul']
-      },
-      {
-        text: 'Add new soul',
-        level: 1,
-        routerLink: ['soul', 'add-soul']
-      },
-      // {
-      //   text: 'Reset',
-      //   level: 1,
-      //   routerLink: ['soul', 'reset']
-      // },
-      // {
-      //   text: 'Core',
-      //   level: 1,
-      //   routerLink: ['soul', 'core']
-      // },
-      // {
-      //   text: 'Full',
-      //   level: 1,
-      //   routerLink: ['soul', 'full']
-      // },
-    // {
-    //   text: 'Content',
-    //   level: 0,
-    // },
-    //   {
-    //     text: 'Typography',
-    //     level: 1,
-    //     routerLink: ['content', 'typography']
-    //   },
-    //   {
-    //     text: 'Images',
-    //     level: 1,
-    //     routerLink: ['content', 'images']
-    //   },
-    //   {
-    //     text: 'Tables',
-    //     level: 1,
-    //     routerLink: ['content', 'tables']
-    //   },
-    // {
-    //   text: 'Forms',
-    //   level: 0,
-    // },
-    //   {
-    //     text: 'Controls',
-    //     level: 1,
-    //     routerLink: ['forms', 'form-controls']
-    //   },
-    //   // {
-    //   //   text: 'Switch',
-    //   //   level: 1,
-    //   //   routerLink: ['forms', 'form-switch']
-    //   // },
-    //   // {
-    //   //   text: 'Select',
-    //   //   level: 1,
-    //   //   routerLink: ['forms', 'form-select']
-    //   // },
-    //   // {
-    //   //   text: 'Range',
-    //   //   level: 1,
-    //   //   routerLink: ['forms', 'form-range']
-    //   // },
-    //   // {
-    //   //   text: 'Check',
-    //   //   level: 1,
-    //   //   routerLink: ['forms', 'form-check']
-    //   // },
-    // {
-    //   text: 'Components',
-    //   level: 0,
-    // },
-    //   {
-    //     text: 'Alerts',
-    //     level: 1,
-    //     routerLink: ['components', 'alerts']
-    //   },
-    //   {
-    //     text: 'Badges',
-    //     level: 1,
-    //     routerLink: ['components', 'badges']
-    //   },
-    //   {
-    //     text: 'Buttons',
-    //     level: 1,
-    //     routerLink: ['components', 'buttons']
-    //   },
-    //   // {
-    //   //   text: 'List',
-    //   //   level: 1,
-    //   //   routerLink: ['components', 'list']
-    //   // },
-    //   // {
-    //   //   text: 'Card',
-    //   //   level: 1,
-    //   //   routerLink: ['components', 'card']
-    //   // },
-    //   {
-    //     text: 'Icons',
-    //     level: 1,
-    //     routerLink: ['components', 'icons']
-    //   },
-    // {
-    //   text: 'Utilites',
-    //   level: 0,
-    // },
-    //   {
-    //     text: 'Spacing',
-    //     level: 1,
-    //     routerLink: ['utilities', 'spacing']
-    //   },
-    //   {
-    //     text: 'Background',
-    //     level: 1,
-    //     routerLink: ['utilities', 'background']
-    //   },
-    //   {
-    //     text: 'Colors',
-    //     level: 1,
-    //     routerLink: ['utilities', 'colors']
-    //   },
-    //   {
-    //     text: 'Borders',
-    //     level: 1,
-    //     routerLink: ['utilities', 'borders']
-    //   },
-    //   {
-    //     text: 'Transitions',
-    //     level: 1,
-    //     routerLink: ['utilities', 'transitions']
-    //   },
-    //   {
-    //     text: 'Truncate',
-    //     level: 1,
-    //     routerLink: ['utilities', 'truncate']
-    //   },
-    //   {
-    //     text: 'Embedded',
-    //     level: 1,
-    //     routerLink: ['utilities', 'embedded']
-    //   }
   ];
 
   constructor(
