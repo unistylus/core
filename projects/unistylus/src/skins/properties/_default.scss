@@ -74,4 +74,14 @@
   --app-gradient-dark: linear-gradient(135deg, var(--app-color-dark-tint) 0%, var(--app-color-dark-shade) 100%);
   --app-gradient-medium: linear-gradient(135deg, var(--app-color-medium-tint) 0%, var(--app-color-medium-shade) 100%);
   --app-gradient-light: linear-gradient(135deg, var(--app-color-light-tint) 0%, var(--app-color-light-shade) 100%);
+  // recolors
+  --app-recolor-primary: brightness(0) saturate(100%) invert(37%) sepia(73%) saturate(1013%) hue-rotate(193deg) brightness(106%) contrast(104%);
+  --app-recolor-secondary: brightness(0) saturate(100%) invert(74%) sepia(18%) saturate(6644%) hue-rotate(169deg) brightness(100%) contrast(102%);
+  --app-recolor-tertiary: brightness(0) saturate(100%) invert(47%) sepia(57%) saturate(6714%) hue-rotate(225deg) brightness(99%) contrast(106%);
+  --app-recolor-success: brightness(0) saturate(100%) invert(90%) sepia(90%) saturate(2470%) hue-rotate(65deg) brightness(90%) contrast(82%);
+  --app-recolor-warning: brightness(0) saturate(100%) invert(67%) sepia(91%) saturate(443%) hue-rotate(357deg) brightness(99%) contrast(106%);
+  --app-recolor-danger: brightness(0) saturate(100%) invert(45%) sepia(84%) saturate(2892%) hue-rotate(324deg) brightness(91%) contrast(102%);
+  --app-recolor-dark: brightness(0) saturate(100%) invert(10%) sepia(6%) saturate(1068%) hue-rotate(182deg) brightness(102%) contrast(91%);
+  --app-recolor-medium: brightness(0) saturate(100%) invert(68%) sepia(9%) saturate(244%) hue-rotate(191deg) brightness(86%) contrast(85%);
+  --app-recolor-light: brightness(0) saturate(100%) invert(91%) sepia(2%) saturate(192%) hue-rotate(188deg) brightness(108%) contrast(96%);
 }

@@ -248,6 +248,11 @@ Gradients:
 - `app-gradient-primary`: primary gradient
 - ... same for other palettes.
 
+Recolors:
+
+- `app-recolor-primary`: primary recolor
+- ... same for other palettes.
+
 
 ### Custom properties
 

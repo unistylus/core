@@ -1,4 +1,5 @@
 @mixin dark_properties {
+  // colors
   --app-color-background: var(--app-color-dark);
   --app-color-background-rgb: var(--app-color-dark-rgb);
   --app-color-background-contrast: var(--app-color-dark-contrast);
@@ -11,4 +12,7 @@
   --app-color-foreground-contrast-rgb: var(--app-color-light-contrast-rgb);
   --app-color-foreground-shade: var(--app-color-light-shade);
   --app-color-foreground-tint: var(--app-color-light-tint);
+  // recolors
+  --app-recolor-background: var(--app-recolor-dark);
+  --app-recolor-foreground: var(--app-recolor-light);
 }
