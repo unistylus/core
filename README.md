@@ -146,7 +146,7 @@ $dark_theme_icons: (
   menu: 'path/to/light/svg'
 );
 
-@include register_app_icons(
+@include register_theme_icons(
   (
     light: $light_theme_icons,
     dark: $dark_theme_icons,
@@ -273,7 +273,7 @@ $dark_theme_properties: (
   bar: 'Bar',
 );
 
-@include register_app_properties(
+@include register_theme_properties(
   (
     light: $light_theme_properties,
     dark: $dark_theme_properties,

@@ -1,9 +1,7 @@
-@import './properties/default';
 @import './properties/dark';
 
 :root,
 [data-theme="default"],
 [data-theme="dark"] {
-  @include default-properties;
   @include dark-properties;
 }

@@ -1,9 +1,7 @@
-@import './properties/default';
 @import './properties/light';
 
 :root,
 [data-theme="default"],
 [data-theme="light"] {
-  @include default-properties;
   @include light-properties;
 }

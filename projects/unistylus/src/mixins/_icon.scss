@@ -19,7 +19,7 @@ $material_icons: 'https://unpkg.com/@unistylus/material-icons@latest';
   }
 }
 
-@mixin register_app_icons($groups) {
+@mixin register_theme_icons($groups) {
   // properties
   @each $theme, $icons in $groups {
     @if $theme != 'default' {
@@ -48,7 +48,7 @@ $material_icons: 'https://unpkg.com/@unistylus/material-icons@latest';
   }
 }
 
-@mixin register_component_icon_properties($groups, $component_name) {
+@mixin register_component_theme_icon_properties($groups, $component_name) {
   @each $theme, $icons in $groups {
     @if $theme != 'default' {
       // custom
@@ -68,7 +68,7 @@ $material_icons: 'https://unpkg.com/@unistylus/material-icons@latest';
   }
 }
 
-@mixin register_component_icon_rules($icons, $component_name) {
+@mixin register_component_theme_icon_rules($icons, $component_name) {
   @each $name, $url in $icons {
     .icon-#{$name} {
       background-image: var(--component-#{$component_name}-icon-#{$name});

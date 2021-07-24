@@ -1,4 +1,4 @@
-@mixin register_app_properties($groups) {
+@mixin register_theme_properties($groups) {
   @each $theme, $props in $groups {
     @if $theme != 'default' {
       // custom
@@ -18,7 +18,7 @@
   }
 }
 
-@mixin register_component_properties($groups, $component_name) {
+@mixin register_component_theme_properties($groups, $component_name) {
   @each $theme, $props in $groups {
     @if $theme != 'default' {
       // custom
