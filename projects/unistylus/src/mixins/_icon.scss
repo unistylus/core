@@ -1,5 +1,6 @@
 $bootstrap_icons: 'https://unpkg.com/@unistylus/bootstrap-icons@latest';
 $material_icons: 'https://unpkg.com/@unistylus/material-icons@latest';
+$fluent_icons: 'https://unpkg.com/@unistylus/fluent-icons@latest';
 
 @mixin register_icons($collection) {
   @each $name, $config in $collection {
