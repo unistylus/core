@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "scss": "unistylus clean dist/unistylus && unistylus copy mixins skins --src projects/unistylus/src --out dist/unistylus/scss",
+    "scss": "unistylus clean dist/unistylus && unistylus copy mixins functions skins --src projects/unistylus/src --out dist/unistylus/scss",
     "css": "sass dist/unistylus/scss:dist/unistylus/css",
     "css-min": "cleancss -O2 --source-map --batch --batch-suffix .min -o dist/unistylus/css dist/unistylus/css/**/*.css",
     "build:lib": "npm run scss && npm run css && npm run css-min && cpy projects/unistylus/package.json README.md LICENSE dist/unistylus",
