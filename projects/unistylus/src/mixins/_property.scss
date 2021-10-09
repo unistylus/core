@@ -1,5 +1,5 @@
-@mixin register_theme_properties($groups) {
-  @each $theme, $props in $groups {
+@mixin register_theme_properties($data) {
+  @each $theme, $props in $data {
     @if $theme != 'default' {
       // custom
       [data-theme="#{$theme}"] {
@@ -18,20 +18,20 @@
   }
 }
 
-@mixin register_component_theme_properties($groups, $component_name) {
-  @each $theme, $props in $groups {
+@mixin register_group_theme_properties($data, $group_name) {
+  @each $theme, $props in $data {
     @if $theme != 'default' {
       // custom
       [data-theme="#{$theme}"] {
         @each $key, $value in $props {
-          --component-#{$component_name}-#{$key}: #{$value};
+          --group-#{$group_name}-#{$key}: #{$value};
         }
       }
     } @else {
       // default
       :root, [data-theme="default"] {
         @each $key, $value in $props {
-          --component-#{$component_name}-#{$key}: #{$value};
+          --group-#{$group_name}-#{$key}: #{$value};
         }
       }
     }

@@ -6,23 +6,32 @@ $fluent_icons: 'https://unpkg.com/@unistylus/fluent-icons@latest';
   @each $name, $config in $collection {
     $pack: nth($config, 1);
     $srcOrName: nth($config, 2);
+    $packVersion: nth($config, 3);
     .icon-#{$name} {
       @if $pack == 'direct' {
         background-image: url('#{$srcOrName}');
       } @else {
         @if $srcOrName != null {
-          background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@latest/#{$srcOrName}.svg');
+          @if $packVersion != null {
+            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@#{$packVersion}/#{$srcOrName}.svg');
+          } @else {
+            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@latest/#{$srcOrName}.svg');
+          }
         } @else {
-          background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@latest/#{$name}.svg');
+          @if $packVersion != null {
+            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@#{$packVersion}/#{$name}.svg');
+          } @else {
+            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@latest/#{$name}.svg');
+          }
         }
       }
     }
   }
 }
 
-@mixin register_theme_icons($groups) {
+@mixin register_theme_icons($data) {
   // properties
-  @each $theme, $icons in $groups {
+  @each $theme, $icons in $data {
     @if $theme != 'default' {
       // custom
       [data-theme="#{$theme}"] {
@@ -41,7 +50,7 @@ $fluent_icons: 'https://unpkg.com/@unistylus/fluent-icons@latest';
   }
 
   // rules
-  $icons: map-get($groups, 'default');
+  $icons: map-get($data, 'default');
   @each $name, $url in $icons {
     .icon-#{$name} {
       background-image: var(--app-icon-#{$name});
@@ -49,30 +58,30 @@ $fluent_icons: 'https://unpkg.com/@unistylus/fluent-icons@latest';
   }
 }
 
-@mixin register_component_theme_icon_properties($groups, $component_name) {
-  @each $theme, $icons in $groups {
+@mixin register_group_theme_icon_properties($data, $group_name) {
+  @each $theme, $icons in $data {
     @if $theme != 'default' {
       // custom
       [data-theme="#{$theme}"] {
         @each $name, $url in $icons {
-          --component-#{$component_name}-icon-#{$name}: url(#{$url});
+          --group-#{$group_name}-icon-#{$name}: url(#{$url});
         }
       }
     } @else {
       // default
       :root, [data-theme="default"] {
         @each $name, $url in $icons {
-          --component-#{$component_name}-icon-#{$name}: url(#{$url});
+          --group-#{$group_name}-icon-#{$name}: url(#{$url});
         }
       }
     }
   }
 }
 
-@mixin register_component_theme_icon_rules($icons, $component_name) {
+@mixin register_group_theme_icon_rules($icons, $group_name) {
   @each $name, $url in $icons {
     .icon-#{$name} {
-      background-image: var(--component-#{$component_name}-icon-#{$name});
+      background-image: var(--group-#{$group_name}-icon-#{$name});
     }
   }
 }

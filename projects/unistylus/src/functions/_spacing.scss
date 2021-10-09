@@ -1,0 +1,28 @@
+
+@function m($modifier, $operator) {
+  @return spacing($modifier, $operator);
+}
+
+@function p($modifier, $operator) {
+  @return spacing($modifier, $operator);
+}
+
+@function g($modifier, $operator) {
+  @return spacing($modifier, $operator);
+}
+
+@function spacing($modifier, $operator) {
+  @if $modifier != null {
+    @if $operator == '/' {
+      @return calc(var(--app-size-spacing) / $modifier);
+    } @else if $operator == '/' {
+      @return calc(var(--app-size-spacing) * $modifier);
+    } @else if $operator == '-' {
+      @return calc(var(--app-size-spacing) - $modifier);
+    } @else {
+      @return calc(var(--app-size-spacing) + $modifier);
+    }
+  } @else {
+    @return var(--app-size-spacing);
+  }
+}

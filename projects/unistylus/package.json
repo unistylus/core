@@ -1,7 +1,7 @@
 {
   "name": "@unistylus/core",
-  "version": "0.0.5",
-  "description": "Just another CSS framework.",
+  "version": "0.0.6",
+  "description": "Just another SCSS/CSS framework.",
   "author": "Lam Nhan",
   "homepage": "https://unistylus.lamnhan.com",
   "license": "MIT",
