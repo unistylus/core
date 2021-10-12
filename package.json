@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "scss": "unistylus clean dist/unistylus && unistylus copy mixins functions --src projects/unistylus/src --out dist/unistylus",
+    "scss": "unistylus clean dist/unistylus && unistylus copy mixins functions index.scss --src projects/unistylus/src --out dist/unistylus",
     "build:lib": "npm run scss && cpy projects/unistylus/package.json README.md LICENSE dist/unistylus",
     "deploy:lib": "cd dist/unistylus && npm publish && cd ../../",
     "build:app": "ng build",
