@@ -1,26 +1,26 @@
 
-@function m($modifier, $operator) {
-  @return spacing($modifier, $operator);
+@function m($modifier: '+', $value: 0) {
+  @return spacing($modifier, $value);
 }
 
-@function p($modifier, $operator) {
-  @return spacing($modifier, $operator);
+@function p($modifier: '+', $value: 0) {
+  @return spacing($modifier, $value);
 }
 
-@function g($modifier, $operator) {
-  @return spacing($modifier, $operator);
+@function g($modifier: '+', $value: 0) {
+  @return spacing($modifier, $value);
 }
 
-@function spacing($modifier, $operator) {
-  @if $modifier != null {
-    @if $operator == '/' {
-      @return calc(var(--app-size-spacing) / $modifier);
-    } @else if $operator == '/' {
-      @return calc(var(--app-size-spacing) * $modifier);
-    } @else if $operator == '-' {
-      @return calc(var(--app-size-spacing) - $modifier);
+@function spacing($modifier: '+', $value: 0) {
+  @if $value != 0 {
+    @if $modifier == '/' {
+      @return calc(var(--app-size-spacing) / $value);
+    } @else if $modifier == '*' {
+      @return calc(var(--app-size-spacing) * $value);
+    } @else if $modifier == '-' {
+      @return calc(var(--app-size-spacing) - #{$value});
     } @else {
-      @return calc(var(--app-size-spacing) + $modifier);
+      @return calc(var(--app-size-spacing) + #{$value});
     }
   } @else {
     @return var(--app-size-spacing);
