@@ -1,0 +1,43 @@
+@function rpr() {
+  @return var(--app-recolor-primary);
+}
+
+@function rse() {
+  @return var(--app-recolor-secondary);
+}
+
+@function rte() {
+  @return var(--app-recolor-tertiary);
+}
+
+@function rsu() {
+  @return var(--app-recolor-success);
+}
+
+@function rwa() {
+  @return var(--app-recolor-warning);
+}
+
+@function rda() {
+  @return var(--app-recolor-danger);
+}
+
+@function rdr() {
+  @return var(--app-recolor-dark);
+}
+
+@function rme() {
+  @return var(--app-recolor-medium);
+}
+
+@function rli() {
+  @return var(--app-recolor-light);
+}
+
+@function rbg() {
+  @return var(--app-recolor-background);
+}
+
+@function rfg() {
+  @return var(--app-recolor-foreground);
+}

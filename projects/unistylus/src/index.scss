@@ -1,4 +1,9 @@
-@import './functions/spacing';
+@import './functions/font';
+@import './functions/size';
+@import './functions/color';
+@import './functions/recolor';
+@import './functions/gradient';
+@import './functions/image';
 
 @import './mixins/icon';
 @import './mixins/property';

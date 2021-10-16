@@ -1,0 +1,43 @@
+@function gpr() {
+  @return var(--app-gradient-primary);
+}
+
+@function gse() {
+  @return var(--app-gradient-secondary);
+}
+
+@function gte() {
+  @return var(--app-gradient-tertiary);
+}
+
+@function gsu() {
+  @return var(--app-gradient-success);
+}
+
+@function gwa() {
+  @return var(--app-gradient-warning);
+}
+
+@function gda() {
+  @return var(--app-gradient-danger);
+}
+
+@function gdr() {
+  @return var(--app-gradient-dark);
+}
+
+@function gme() {
+  @return var(--app-gradient-medium);
+}
+
+@function gli() {
+  @return var(--app-gradient-light);
+}
+
+@function gbg() {
+  @return var(--app-gradient-background);
+}
+
+@function gfg() {
+  @return var(--app-gradient-foreground);
+}

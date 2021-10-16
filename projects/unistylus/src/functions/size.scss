@@ -1,3 +1,22 @@
+@function f() {
+  @return var(--app-size-font);
+}
+
+@function s() {
+  @return var(--app-size-spacing);
+}
+
+@function r() {
+  @return var(--app-size-radius);
+}
+
+@function b() {
+  @return var(--app-size-border);
+}
+
+@function z() {
+  @return var(--app-size-shadow);
+}
 
 @function m($modifier: '+', $value: 0) {
   @return spacing($modifier, $value);
@@ -14,9 +33,9 @@
 @function spacing($modifier: '+', $value: 0) {
   @if $value != 0 {
     @if $modifier == '/' {
-      @return calc(var(--app-size-spacing) / $value);
+      @return calc(var(--app-size-spacing) / #{$value});
     } @else if $modifier == '*' {
-      @return calc(var(--app-size-spacing) * $value);
+      @return calc(var(--app-size-spacing) * #{$value});
     } @else if $modifier == '-' {
       @return calc(var(--app-size-spacing) - #{$value});
     } @else {

@@ -1,0 +1,75 @@
+@function ipr() {
+  @return var(--app-image-primary);
+}
+
+@function ise() {
+  @return var(--app-image-secondary);
+}
+
+@function ite() {
+  @return var(--app-image-tertiary);
+}
+
+@function isu() {
+  @return var(--app-image-success);
+}
+
+@function iwa() {
+  @return var(--app-image-warning);
+}
+
+@function ida() {
+  @return var(--app-image-danger);
+}
+
+@function idr() {
+  @return var(--app-image-dark);
+}
+
+@function ime() {
+  @return var(--app-image-medium);
+}
+
+@function ili() {
+  @return var(--app-image-light);
+}
+
+@function ibg() {
+  @return var(--app-image-background);
+}
+
+@function ifg() {
+  @return var(--app-image-foreground);
+}
+
+@function ihe() {
+  @return var(--app-image-header);
+}
+
+@function ifo() {
+  @return var(--app-image-footer);
+}
+
+@function isi() {
+  @return var(--app-image-sidebar);
+}
+
+@function ita() {
+  @return var(--app-image-tabs);
+}
+
+@function ife() {
+  @return var(--app-image-featured);
+}
+
+@function ist() {
+  @return var(--app-image-1st);
+}
+
+@function ind() {
+  @return var(--app-image-2nd);
+}
+
+@function ird() {
+  @return var(--app-image-3rd);
+}

@@ -1,0 +1,15 @@
+@function fh() {
+  @return var(--app-font-head);
+}
+
+@function fb() {
+  @return var(--app-font-body);
+}
+
+@function fq() {
+  @return var(--app-font-quote);
+}
+
+@function fc() {
+  @return var(--app-font-code);
+}

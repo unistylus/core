@@ -1,0 +1,92 @@
+@function pr($variant: '') {
+  @return color('primary', $variant);
+}
+@function pr-rgb($variant: '') {
+  @return color-rgb('primary', $variant);
+}
+
+@function se($variant: '') {
+  @return color('secondary', $variant);
+}
+@function se-rgb($variant: '') {
+  @return color-rgb('secondary', $variant);
+}
+
+@function te($variant: '') {
+  @return color('tertiary', $variant);
+}
+@function te-rgb($variant: '') {
+  @return color-rgb('tertiary', $variant);
+}
+
+@function su($variant: '') {
+  @return color('success', $variant);
+}
+@function su-rgb($variant: '') {
+  @return color-rgb('success', $variant);
+}
+
+@function wa($variant: '') {
+  @return color('warning', $variant);
+}
+@function wa-rgb($variant: '') {
+  @return color-rgb('warning', $variant);
+}
+
+@function da($variant: '') {
+  @return color('danger', $variant);
+}
+@function da-rgb($variant: '') {
+  @return color-rgb('danger', $variant);
+}
+
+@function dr($variant: '') {
+  @return color('dark', $variant);
+}
+@function dr-rgb($variant: '') {
+  @return color-rgb('dark', $variant);
+}
+
+@function me($variant: '') {
+  @return color('medium', $variant);
+}
+@function me-rgb($variant: '') {
+  @return color-rgb('medium', $variant);
+}
+
+@function li($variant: '') {
+  @return color('light', $variant);
+}
+@function li-rgb($variant: '') {
+  @return color-rgb('light', $variant);
+}
+
+@function bg($variant: '') {
+  @return color('background', $variant);
+}
+@function bg-rgb($variant: '') {
+  @return color-rgb('background', $variant);
+}
+
+@function fg($variant: '') {
+  @return color('foreground', $variant);
+}
+@function fg-rgb($variant: '') {
+  @return color-rgb('foreground', $variant);
+}
+
+@function color($name, $variant: '') {
+  @if $variant == '' {
+    @return var(--app-color-#{$name});
+  } @else {
+    @return var(--app-color-#{$name}-#{$variant});
+  }
+}
+
+@function color-rgb($name, $variant: '') {
+  @if $variant == '' or $variant == 'shade' or $variant == 'tint' {
+    @return var(--app-color-#{$name}-rgb);
+  } @else {
+    @return var(--app-color-#{$name}-#{$variant}-rgb);
+  }
+}
