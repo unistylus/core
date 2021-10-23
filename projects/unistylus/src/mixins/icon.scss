@@ -4,25 +4,26 @@ $fluent_icons: 'https://unpkg.com/@unistylus/fluent-icons@latest';
 
 @mixin register_icons($collection) {
   @each $name, $config in $collection {
+    $length: length($config);
     $pack: nth($config, 1);
-    $srcOrName: nth($config, 2);
-    $packVersion: nth($config, 3);
     .icon-#{$name} {
-      @if $pack == 'direct' {
-        background-image: url('#{$srcOrName}');
+      @if $pack == 'direct' or $pack == '' {
+        $src: nth($config, 2);
+        background-image: url('#{$src}');
       } @else {
-        @if $srcOrName != null {
-          @if $packVersion != null {
-            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@#{$packVersion}/#{$srcOrName}.svg');
+        @if $length == 3 {
+          $vendorName: nth($config, 2);
+          $version: nth($config, 3);
+          @if $vendorName != null and $vendorName != '' {
+            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@#{$version}/#{$vendorName}.svg');
           } @else {
-            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@latest/#{$srcOrName}.svg');
+            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@#{$version}/#{$name}.svg');
           }
+        } @else if $length == 2 {
+          $vendorName: nth($config, 2);
+          background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@latest/#{$vendorName}.svg');
         } @else {
-          @if $packVersion != null {
-            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@#{$packVersion}/#{$name}.svg');
-          } @else {
-            background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@latest/#{$name}.svg');
-          }
+          background-image: url('https://unpkg.com/@unistylus/#{$pack}-icons@latest/#{$name}.svg');
         }
       }
     }

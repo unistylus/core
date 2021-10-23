@@ -45,7 +45,7 @@
     "@lamnhan/ngx-schemata": "0.0.3",
     "@lamnhan/ngx-useful": "0.0.11",
     "@lamnhan/schemata": "0.0.8",
-    "@unistylus/core": "0.0.10",
+    "@unistylus/core": "0.0.11",
     "change-case": "^4.1.2",
     "ngx-quicklink": "^0.2.7",
     "rxjs": "~6.6.0",

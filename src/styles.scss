@@ -3,8 +3,8 @@
 @import '@unistylus/core';
 
 $icons: (
-  menu: ('bootstrap', 'list', 'latest'),
-  github: ('bootstrap', 'github', 'latest'),
+  menu: ('bootstrap', 'list'),
+  github: ('bootstrap'),
 );
 
 @include register_icons($icons);

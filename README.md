@@ -207,6 +207,10 @@ $dark_theme_properties: (
 
 See [the list of mixins](https://github.com/unistylus/core/blob/main/projects/unistylus/src/mixins).
 
+## Functions
+
+See [the list of functions](https://github.com/unistylus/core/blob/main/projects/unistylus/src/functions).
+
 ## License
 
 **@unistylus/core** is released under the [MIT](https://github.com/unistylus/core/blob/master/LICENSE) license.
