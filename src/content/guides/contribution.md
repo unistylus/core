@@ -4,8 +4,7 @@ Welcome, want to lend a hand?
 
 ### Add features
 
-- More skins
-- More souls
+- More collections (soul + skins)
 - More icon packs
 
 ### Fix bugs

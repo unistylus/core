@@ -33,14 +33,9 @@ export class AppComponent {
         routerLink: ['guide', 'usage']
       },
       {
-        text: 'What is skin?',
+        text: 'Skin, soul & collection?',
         level: 1,
-        routerLink: ['guide', 'skin']
-      },
-      {
-        text: 'What is soul?',
-        level: 1,
-        routerLink: ['guide', 'soul']
+        routerLink: ['guide', 'terminology']
       },
       {
         text: 'Contribution',

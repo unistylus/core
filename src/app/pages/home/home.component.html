@@ -38,15 +38,14 @@
     <div class="title"><h2>Introduction</h2></div>
     <div class="body">
       <p class="text-medium" style="font-size: 1.2rem;">This is just another UI framework that nobody want to use, <a href="https://lamnhan.com" target="_blank">but me</a>, or isn't it?</p>
-      <p>It is an effort of balancing between convenience and customization.</p>
-      <p>If you want to build app that small, clean and have total control; or simply don't want to use other frameworks. You may give Unistylus a try:</p>
+      <p>It is an effort of unifying the web UI development experience:</p>
       <ul>
         <li>💚 Just standard HTML, CSS/SCSS & JS (when needed).</li>
         <li>🌓 Supports multiple skins in app runtime.</li>
         <li>👌 No icon fonts; only register whatever icons you ever need.</li>
         <li>⚡ Imports just the parts you want.</li>
         <li>🔨 Customize to the bone, at microscopic level.</li>
-        <li>🔌 Drop in replacement (-ish) for other frameworks.</li>
+        <li>🔌 Replacement (-ish) for other frameworks.</li>
         <li>😍 A member of the <a href="https://lamnhan.com/works" target="blank">Lam Nhan Ecosystem</a></li>
       </ul>
     </div>
@@ -57,9 +56,27 @@
 
     <div class="body">
 
+      <div class="soul margin-top-2x">
+        <p><strong>Apply soul</strong>: An app should only have one soul, for example this app has the <code>bootstrap</code> soul.</p>
+        <p>This changer is for <strong><u>DEMONSTRATION PURPOSE</u></strong>.</p>
+        <ul>
+          <li (click)="changeSoul('bootstrap')" [class.active]="soulService.soul === 'bootstrap'">
+            <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
+            <span>Bootstrap</span>
+          </li>
+          <li (click)="changeSoul('material')" [class.active]="soulService.soul === 'material'">
+            <img src="https://img.icons8.com/color/48/000000/material-ui.png"/>
+            <span>Material</span>
+          </li>
+          <li>
+            <img src="https://img.icons8.com/fluent/48/000000/connection-status-off.png"/>
+            <span>More souls coming!</span>
+          </li>
+        </ul>
+      </div>
+
       <div class="skin margin-top-2x">
-        <p><strong>Apply skin</strong></p>
-        <p>An app can have many skins, skin can be changed easily.</p>
+        <p><strong>Apply skin</strong>: An app can have many skins, skin can be changed easily.</p>
         <ul>
           <li (click)="changeSkin('light')" [class.active]="settingService.theme === 'light'">
             <img src="https://img.icons8.com/fluent/50/000000/sun.png"/>
@@ -76,24 +93,7 @@
         </ul>
       </div>
 
-      <div class="soul margin-top-2x">
-        <p><strong>Apply soul</strong></p>
-        <p>An app should only have one soul, for example this app has the <code>bootstrap</code> soul. This changer is for demonstration purpose.</p>
-        <ul>
-          <li (click)="changeSoul('bootstrap')" [class.active]="soulService.soul === 'bootstrap'">
-            <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
-            <span>Bootstrap</span>
-          </li>
-          <li (click)="changeSoul('material')" [class.active]="soulService.soul === 'material'">
-            <img src="https://img.icons8.com/color/48/000000/material-ui.png"/>
-            <span>Material</span>
-          </li>
-          <li>
-            <img src="https://img.icons8.com/fluent/48/000000/connection-status-off.png"/>
-            <span>More soul coming!</span>
-          </li>
-        </ul>
-      </div>
+      
 
     </div>
   </section>
@@ -104,11 +104,7 @@
 
     <div class="body">
 
-      <nguix-content [content]="scssSkin"></nguix-content>
-      <nguix-content [content]="scssSoul"></nguix-content>
-
-      <nguix-content [content]="cssSkin"></nguix-content>
-      <nguix-content [content]="cssSoul"></nguix-content>
+      <nguix-content [content]="installationContent"></nguix-content>
 
       <div class="margin-top">
         <a

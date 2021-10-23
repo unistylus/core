@@ -1,44 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-/**
- * ====================================================
- * 3rd parties
- * ====================================================
- */
+@import '@unistylus/core';
 
-// prismjs
-@import 'prismjs/themes/prism-okaidia.css';
-@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+$icons: (
+  menu: ('bootstrap', 'list', 'latest'),
+  github: ('bootstrap', 'github', 'latest'),
+);
 
-/**
- * ====================================================
- * Unistylus
- * ====================================================
- */
-
-// register skins
-@import '@unistylus/core/scss/skins/light-default';
-@import '@unistylus/core/scss/skins/dark';
-
-// customize a skin
-// :root,
-// [data-theme=default],
-// [data-theme=light]
-// {
-//   --app-color-primary: ...;
-// }
-
-// register a soul
-// in the index.html (for dynamic demonstration purpose)
-
-// register app
-@import './theming/app.module';
-
-/**
- * ====================================================
- * Global styles 
- * ====================================================
- */
+@include register_icons($icons);
 
 .code {
 

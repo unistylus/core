@@ -21,13 +21,14 @@
 
     .sidebar {
       width: 250px;
+      min-width: 250px;
     }
     
     .page-container {
       flex: 1;
       margin: 0;
       margin-left: 2rem;
-      max-width: calc(100% - 250px - 2rem - 1px);
+      max-width: calc(100vw - 250px - 2rem - 1px);
       border-left: 1px solid var(--app-color-background-shade);
       padding: 2rem;
     }
