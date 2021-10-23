@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingService } from '@lamnhan/ngx-useful';
 
-import { SoulService } from '../../services/soul/soul.service';
-
 @Component({
   selector: 'app-home-page',
   templateUrl: './home.component.html',
@@ -11,7 +9,7 @@ import { SoulService } from '../../services/soul/soul.service';
 export class HomeComponent implements OnInit {
 
   installationContent = `
-Install the CLI:
+Install the CLI, it helps you to change between souls, add and remove skins or parts:
 
 \`\`\`bash
 npm i -D @unistylus/cli
@@ -19,19 +17,10 @@ npm i -D @unistylus/cli
 `;
 
   constructor(
-    public readonly settingService: SettingService,
-    public readonly soulService: SoulService,
+    public readonly settingService: SettingService
   ) { }
 
   ngOnInit(): void {
-  }
-
-  changeSkin(name: string) {
-    this.settingService.changeTheme(name); 
-  }
-
-  changeSoul(name: string) {
-    this.soulService.changeSoul(name);
   }
 
 }

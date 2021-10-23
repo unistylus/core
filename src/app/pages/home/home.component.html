@@ -52,48 +52,33 @@
   </section>
 
   <section class="action margin-top-5x">
-    <div class="title"><h2>See the action</h2></div>
+    <div class="title"><h2>List of collection</h2></div>
 
     <div class="body">
 
-      <div class="soul margin-top-2x">
-        <p><strong>Apply soul</strong>: An app should only have one soul, for example this app has the <code>bootstrap</code> soul.</p>
-        <p>This changer is for <strong><u>DEMONSTRATION PURPOSE</u></strong>.</p>
+      <div class="collection-list margin-top-2x">
+        <p>Here are several collections as a proof of concept. There are lots of works to be done. 😅</p>
         <ul>
-          <li (click)="changeSoul('bootstrap')" [class.active]="soulService.soul === 'bootstrap'">
-            <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
-            <span>Bootstrap</span>
-          </li>
-          <li (click)="changeSoul('material')" [class.active]="soulService.soul === 'material'">
-            <img src="https://img.icons8.com/color/48/000000/material-ui.png"/>
-            <span>Material</span>
+          <li>
+            <a href="https://unistylus-bootstrap.lamnhan.com" target="_blank">
+              <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
+              <span>Bootstrap</span>
+            </a>
           </li>
           <li>
-            <img src="https://img.icons8.com/fluent/48/000000/connection-status-off.png"/>
-            <span>More souls coming!</span>
+            <a href="https://unistylus-bootstrap.lamnhan.com" target="_blank">
+              <img src="https://img.icons8.com/color/48/000000/material-ui.png"/>
+              <span>Material</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" (click)="false">
+              <img src="https://img.icons8.com/fluent/48/000000/connection-status-off.png"/>
+              <span>More collections!</span>
+            </a>
           </li>
         </ul>
       </div>
-
-      <div class="skin margin-top-2x">
-        <p><strong>Apply skin</strong>: An app can have many skins, skin can be changed easily.</p>
-        <ul>
-          <li (click)="changeSkin('light')" [class.active]="settingService.theme === 'light'">
-            <img src="https://img.icons8.com/fluent/50/000000/sun.png"/>
-            <span>Light skin</span>
-          </li>
-          <li (click)="changeSkin('dark')" [class.active]="settingService.theme === 'dark'">
-            <img src="https://img.icons8.com/fluent/48/000000/new-moon.png"/>
-            <span>Dark skin</span>
-          </li>
-          <li>
-            <img src="https://img.icons8.com/fluent/48/000000/connection-status-off.png"/>
-            <span>More skins coming!</span>
-          </li>
-        </ul>
-      </div>
-
-      
 
     </div>
   </section>

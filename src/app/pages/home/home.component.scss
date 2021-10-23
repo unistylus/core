@@ -1,4 +1,5 @@
 .host {
+  padding: 1rem;
 
   .heading {
 
@@ -39,7 +40,7 @@
 
   .action {
 
-    .soul, .skin {
+    .collection-list {
 
       ul {
         list-style: none;
@@ -49,56 +50,52 @@
         flex-wrap: wrap;
 
         li {
-          width: 100%;
-          padding: 1rem;
           margin-top: 1rem;
-          cursor: pointer;
-          border: 1px solid var(--app-color-foreground);
-          border-radius: 3px;
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          
-          &:hover {
-            background: var(--app-color-background-shade);
+          width: 100%;
+
+          a {
+            padding: 1rem;
+            border: 1px solid var(--app-color-foreground);
+            border-radius: 3px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            color: var(--app-color-foreground);
+            text-decoration: none;
+            
+            &:hover {
+              background: var(--app-color-background-shade);
+            }
+            
+            &.active {
+              background: var(--app-color-medium);
+            }
+  
+            img {
+              width: 48px;
+              height: 48px;
+            }
+  
+            span {
+              margin-left: 1rem;
+              font-size: 1.3rem;
+            }
           }
 
           &:last-child {
             opacity: .3;
 
-            &:hover {
-              background: none;
+            a {
+              color: var(--app-color-foreground);
+              cursor: default;
+
+              &:hover, &:focus {
+                background: none;
+                text-decoration: none;
+              }
             }
           }
-          
-          &.active {
-            background: var(--app-color-medium);
-          }
-
-          img {
-            width: 48px;
-            height: 48px;
-          }
-
-          span {
-            margin-left: 1rem;
-            font-size: 1.3rem;
-          }
         }
-      }
-    }
-
-    .skin ul li {
-      padding: .5rem;
-
-      img {
-        width: 32px;
-        height: 32px;
-      }
-
-      span {
-        margin-left: 1rem;
-        font-size: 1rem;
       }
     }
 
@@ -145,7 +142,7 @@
 
     .action {
 
-      .skin, .soul {
+      .collection-list {
   
         ul {
           margin-left: -1rem;
@@ -156,10 +153,6 @@
             margin-left: 1rem;
           }
         }
-      }
-
-      .skin ul li {
-        width: calc(33.333% - 1rem);
       }
     }
   }

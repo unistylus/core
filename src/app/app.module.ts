@@ -19,8 +19,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 
-import { SoulService } from './services/soul/soul.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +40,6 @@ import { SoulService } from './services/soul/soul.service';
     MetaService,
     NavService,
     SettingService,
-    SoulService,
   ],
   bootstrap: [AppComponent]
 })

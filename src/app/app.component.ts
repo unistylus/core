@@ -18,10 +18,10 @@ import {
 export class AppComponent {
 
   menuItems: NavItem[] = [
-    {
-      text: 'Guides',
-      level: 0,
-    },
+    // {
+    //   text: 'Guides',
+    //   level: 0,
+    // },
       {
         text: 'Introduction',
         level: 1,

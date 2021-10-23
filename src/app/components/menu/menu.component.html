@@ -6,20 +6,6 @@
       <span (click)="mobileMenuExpanded=!mobileMenuExpanded">Documentation</span>
     </div>
 
-    <select id="soul-selector" (change)="selectSoul($event)">
-      <optgroup label="Select a soul:">
-        <option value="bootstrap" [selected]="soulService.soul === 'bootstrap'">Bootstrap</option>
-        <option value="material" [selected]="soulService.soul === 'material'">Material</option>
-      </optgroup>
-    </select>
-
-    <select id="theme-selector" (change)="selectTheme($event)">
-      <optgroup label="Select a skin:">
-        <option value="light" [selected]="settingService.theme === 'light'">Light</option>
-        <option value="dark" [selected]="settingService.theme === 'dark'">Dark</option>
-      </optgroup>
-    </select>
-
     <div class="toggler">
       <button (click)="mobileMenuExpanded=!mobileMenuExpanded">
         <i class="icon icon-menu"></i>
